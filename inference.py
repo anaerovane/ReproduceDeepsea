@@ -80,9 +80,6 @@ def main() -> None:
             shutil.copy2(source, destination)
         print(f"Saved {destination} ({destination.stat().st_size:,} bytes)")
 
-    names_source = root / "predictor_names.txt"
-    if names_source.is_file() and names_source.resolve() != (HERE / "predictor_names.txt").resolve():
-        shutil.copy2(names_source, HERE / "predictor_names.txt")
     print("Inference arrays collected. Run plot.py pretrained and plot.py ours to draw the two plots.")
 
 

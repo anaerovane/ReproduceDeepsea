@@ -18,6 +18,7 @@ import matplotlib.pyplot as plt
 import os
 import matplotlib.gridspec as gridspec
 from sklearn.metrics import roc_curve, auc, accuracy_score
+from huggingface_hub import hf_hub_download
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -38,6 +39,16 @@ plt.rcParams.update({
 
 WORK = os.path.dirname(os.path.abspath(__file__))
 OUT  = f'{WORK}'
+HF_REPO_ID = 'aer0vane/reproduce_deepsea'
+
+
+def input_path(filename):
+    """Use a local inference output when present, otherwise read the HF copy."""
+    local_path = os.path.join(WORK, filename)
+    if os.path.isfile(local_path):
+        return local_path
+    print(f"  Fetching {filename} from Hugging Face cache...")
+    return hf_hub_download(repo_id=HF_REPO_ID, filename=filename, repo_type='model')
 
 # =============================================================================
 # 解析参数
@@ -55,23 +66,22 @@ print(f"=== Generating Figure 2 for: {model_name} ===")
 print("Loading data...")
 
 # Figure 2a 数据
-RES = WORK
-labels = np.load(f'{RES}/test_labels.npy')
-pred_file = f'{RES}/test_predictions_{model_name}.npy'
+labels = np.load(input_path('test_labels.npy'))
+pred_file = input_path(f'test_predictions_{model_name}.npy')
 preds = np.load(pred_file)
-with open(f'{WORK}/predictor_names.txt') as f:
+with open(input_path('predictor_names.txt')) as f:
     predictor_names = [l.strip() for l in f if l.strip()]
 print(f"  model={model_name}, test_labels={labels.shape}, test_preds={preds.shape}")
 
 # Figure 2b/1c 真实数据 (DGF)
-dgf_ref_path = f'{RES}/dgf_ref_preds_{model_name}.npy'
-dgf_alt_path = f'{RES}/dgf_alt_preds_{model_name}.npy'
+dgf_ref_path = input_path(f'dgf_ref_preds_{model_name}.npy')
+dgf_alt_path = input_path(f'dgf_alt_preds_{model_name}.npy')
 dgf_ref = np.load(dgf_ref_path)
 dgf_alt = np.load(dgf_alt_path)
 print(f"  dgf_ref={dgf_ref.shape}, dgf_alt={dgf_alt.shape}")
 
 # Load experimental data (per-cell-type) as true labels
-dgf_csv = pd.read_csv(f'{WORK}/41592_2015_BFnmeth3547_MOESM647_ESM.csv', skiprows=1)
+dgf_csv = pd.read_csv(input_path('41592_2015_BFnmeth3547_MOESM647_ESM.csv'), skiprows=1)
 # Build variant-to-index mapping (same order as prediction files)
 variants = dgf_csv[['CHR', 'POS', 'REF', 'ALT']].drop_duplicates().reset_index(drop=True)
 variant_to_idx = {}
