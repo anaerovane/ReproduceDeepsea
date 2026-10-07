@@ -1,0 +1,3 @@
+# Per-fold caches and OOF tables belong with the large reproducibility artifacts.
+results/*.npz
+results/*_oof.tsv.gz
