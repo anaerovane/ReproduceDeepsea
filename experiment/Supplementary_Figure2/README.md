@@ -1,43 +1,41 @@
-# Supplementary Figure 2 — DeepSEA vs gkm-SVM
+# Experiment 3 — Supplementary Figure 2
 
-Reproduction of the transcription-factor binding comparison: the left panel compares per-feature DeepSEA and gkm-SVM AUCs; the right panel shows AUC distributions for DeepSEA (1000bp) and gkm-SVM (1000bp/300bp). Figures are split into **Pretrained** and **Ours** DeepSEA checkpoints.
+Reproduction code for the DeepSEA vs gkm-SVM transcription-factor comparison. The local pretrained and locally trained checkpoints have separate figures.
 
-This is a local reproduction on the documented DeepSEA held-out data and local model checkpoints. The values are computed from this project’s runs; they are not copied from the paper’s figure.
+- [GitHub code, figures, and documentation](https://github.com/anaerovane/ReproduceDeepsea/tree/main/experiment/Supplementary_Figure2)
+- [Hugging Face trained gkm-SVM models and result files](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Supplementary_Figure2)
 
-## Links
+## Directory layout
 
-- [Hugging Face model files, trained gkm-SVM models, and result artifacts](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Supplementary_Figure2)
-- [GitHub project](https://github.com/anaerovane/ReproduceDeepsea)
-- [Original DeepSEA paper](https://www.nature.com/articles/nmeth.3547)
-- [Official DeepSEA data/download page](https://deepsea.princeton.edu/help/)
+- This directory contains the training, retry, inference/plotting, and packaging scripts, gkm-SVM executables, and this guide.
+- `suppfig2_tf_fulltrain/` is the only child directory. Its images, tables, model inference outputs, and notes are directly inside it.
+- Detailed per-feature models and training indices are on Hugging Face at `experiment/Supplementary_Figure2/feature_models_and_indices.tar.zst`. DeepSEA matched-test prediction caches and index metadata are under `experiment/Supplementary_Figure2/results/`; the plotting script fetches those caches on demand. The large remote copies are removed from the local experiment folder after checksum verification.
+- Upstream gkm-SVM source and superseded smoke/legacy run materials are retained in separate archives in that same child directory.
+- The archives preserve files and their original paths; they can be expanded when per-feature inspection or compilation is needed.
 
-## Files
+## Active scripts
 
-- `reproduce_suppfig2_all_tf.py`: train/evaluate both gkm-SVM context lengths for all TF profiles.
-- `retry_incomplete_suppfig2.py`: derive retry targets from the full-run results and retry them.
-- `plot_suppfig2_pretrained_ours.py`: infer each DeepSEA checkpoint on matching held-out rows and draw separate figures.
-- `package_suppfig2_artifacts.py`: merge per-feature working outputs into the single archive after a run.
-- `gkm_vs_deepsea_pretrained.png/.pdf` and `gkm_vs_deepsea_ours.png/.pdf`: final plots.
-- `gkm_auc_results_completed.csv` and `pretrained_ours_same_test_auc.csv`: AUC tables.
-- `test_indices.npz`: held-out indices for the matched comparison.
-- `vendor_gkmsvm_source.tar.zst` and `LICENSE.gkmsvm`: gkm-SVM source and license.
-- The trained per-feature model/support-vector/score files are linked from the Hugging Face folder above; they are too large for this GitHub repository.
+- `reproduce_suppfig2_all_tf.py` trains and evaluates the 1000bp and center-300bp gkm-SVM models.
+- `retry_incomplete_suppfig2.py` retries features that lack a valid full-run AUC.
+- `plot_suppfig2_pretrained_ours.py` evaluates the pretrained and local checkpoints on matching held-out examples and writes the two figures.
 
-## Reproduce
-
-Set `DEEPSEA_FUXIAN_ROOT` to a directory containing the official DeepSEA training bundle under `deepsea_train/`, the local checkpoints under `models/` and `training_checkpoints/`, and `predictor_names.txt`. The checkpoints are already available in the linked Hugging Face repository. Install Python dependencies (`numpy`, `scipy`, `torch`, `scikit-learn`, `matplotlib`) and run from this folder:
+Set `DEEPSEA_FUXIAN_ROOT` to the `fuxian3` project root. Restore missing data using [`DOWNLOAD.md`](../../DOWNLOAD.md); model weights are fetched into the user cache by `model_assets.py`. Pretrained weights are downloaded on demand by `model_assets.py`; the epoch-53 checkpoint is resolved from Hugging Face if it is not present in `training/checkpoints/`. Run from this directory:
 
 ```bash
+python prepare_gkm_training_cache.py  # optional: the runner creates caches automatically when absent
 python reproduce_suppfig2_all_tf.py
 python retry_incomplete_suppfig2.py
 python plot_suppfig2_pretrained_ours.py
 python package_suppfig2_artifacts.py
 ```
 
-Before packaging, authenticate with `hf auth login`; the package script updates the archive on Hugging Face and removes the local archive after verification.
+The training scripts create per-feature working folders while they run. Log in with `hf auth login` first; the final command temporarily downloads the existing Hub archive, merges new outputs, uploads and verifies the updated archive, then removes expanded folders and all temporary large copies. Set `DEEPSEA_HF_REPO` to override the default Hub repository.
 
-The included gkm-SVM executables are Linux x86-64. For another platform, build from the included source archive or use the upstream source linked in `LOCAL_MODEL_FIGURES.md`.
+## Final outputs
 
-## Evaluation notes
+- `suppfig2_tf_fulltrain/gkm_vs_deepsea_pretrained.png` and `.pdf`
+- `suppfig2_tf_fulltrain/gkm_vs_deepsea_ours.png` and `.pdf`
+- `suppfig2_tf_fulltrain/gkm_auc_results_completed.csv`
+- `suppfig2_tf_fulltrain/pretrained_ours_same_test_auc.csv`
 
-The final table has 690 TF features: 689 have defined AUCs and one has no positive examples in the forward test split, so ROC AUC is undefined. Retry features use the maximum available balanced clean training sample; low-positive rows are identified in the CSV. The exact inputs, checkpoint hashes, sampling details, and limitations are in `LOCAL_MODEL_FIGURES.md` and `COMPLETION_AUDIT.md`.
+The published-table proxy chart was removed; it was superseded by the two local-checkpoint comparisons. See `suppfig2_tf_fulltrain/LOCAL_MODEL_FIGURES.md` for methods, sources, cohort details, and limitations.
