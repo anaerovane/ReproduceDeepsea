@@ -1,0 +1,6 @@
+/suppfig2_tf_fulltrain/feature_*/
+/suppfig2_tf_fulltrain/retry_incomplete/
+/suppfig2_tf_fulltrain/test_indices/
+/suppfig2_tf_fulltrain/*.bin
+/suppfig2_tf_fulltrain/.*_pred_tmp.npy
+/suppfig2_tf_fulltrain/*predictions*.npy

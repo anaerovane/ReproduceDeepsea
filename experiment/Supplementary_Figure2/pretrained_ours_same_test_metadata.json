@@ -1,0 +1,22 @@
+{
+  "device": "cuda",
+  "n_features": 689,
+  "n_unique_test_sequences": 227418,
+  "strand_averaging": true,
+  "input_channel_order": "AGCT",
+  "test_indices_source": "per-feature saved held-out indices used for gkm AUCs",
+  "checkpoints": {
+    "pretrained": {
+      "path": "/home/wuzheng/IOC/deepsea/fuxian3/models/deepsea_predict.pth",
+      "sha256": "347c742703a75f07e9abd6c77409fe754fb1a3b3736ccdb6569784f56116453a"
+    },
+    "ours": {
+      "path": "/home/wuzheng/IOC/deepsea/fuxian3/training_checkpoints/best_model_FINAL_EPOCH53.pth",
+      "sha256": "5979e5b48ef892b76f23aa3af4149787e8f7a0ef5f5bfef5e676997a6c1731bb"
+    }
+  },
+  "output_figures": [
+    "gkm_vs_deepsea_pretrained.png",
+    "gkm_vs_deepsea_ours.png"
+  ]
+}
