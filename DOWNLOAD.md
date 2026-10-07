@@ -83,3 +83,14 @@ The locally retrained epoch-53 checkpoint is separate from the pretrained weight
 ## What remains in this checkout
 
 This guide is stored in the `fuxian3/` project root. The data are not deleted from their source; rerunning a section restores files to the root-level paths expected by the code. The training scripts and code remain under `training/` and `experiment/`.
+## 5. Figure 3 model outputs
+
+The two 13.6 GB ref/alt effect matrices, variant-row mapping, OOF predictions, baseline score tables, and AUC/audit summaries are published under [Hugging Face Figure 3 outputs](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Figure3/outputs). They total about 27.48 GB. The local `experiment/Figure3/outputs/HUGGINGFACE_DATA.md` records the artifact link and restore command.
+
+From the `fuxian3` project root, restore the published files with:
+
+```bash
+hf download aer0vane/reproduce_deepsea --include "experiment/Figure3/outputs/**" --local-dir .
+```
+
+The 1.86 GB sequence cache and per-fold classifier caches are not mirrored; they can be regenerated from the public tables/reference genome and effect matrices.

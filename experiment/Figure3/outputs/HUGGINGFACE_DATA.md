@@ -2,7 +2,7 @@
 
 Browse or download the published outputs:
 
-- [Hugging Face Figure 3 outputs](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Figure3/outputs)
+- [Hugging Face Figure 3 outputs](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Figure3/outputs) (published revision `a01385444a8e82b59a33edfe26e62c6e6d4c5016`)
 - [GitHub Figure 3 code, plots, and documentation](https://github.com/anaerovane/ReproduceDeepsea/tree/main/experiment/Figure3)
 
 Restore the published files to the `fuxian3` project root:
