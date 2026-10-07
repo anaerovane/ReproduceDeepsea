@@ -15,7 +15,7 @@ The CADD input VCF contains 1,855,581 unique SNVs. The returned files contain 1,
 | GWAS random negatives | 962,908 | 962,905 (100.0%) | 946,438 (98.3%) |
 | GWAS 360bp negatives | 11,947 | 11,947 (100.0%) | 11,906 (99.7%) |
 
-Full per-group coverage is in [`annotation_coverage.tsv`](https://huggingface.co/aer0vane/reproduce_deepsea/blob/main/experiment/experiment9/outputs/annotation_coverage.tsv); hashes, batch row counts, overlaps, and matching checks are in [`cadd_downloaded_batch_audit.json`](https://huggingface.co/aer0vane/reproduce_deepsea/blob/main/experiment/experiment9/outputs/cadd_downloaded_batch_audit.json).
+Full per-group coverage is in [`annotation_coverage.tsv`](https://github.com/anaerovane/ReproduceDeepsea/blob/main/experiment/experiment9/outputs/annotation_coverage.tsv); hashes, batch row counts, overlaps, and matching checks are in [`cadd_downloaded_batch_audit.json`](https://github.com/anaerovane/ReproduceDeepsea/blob/main/experiment/experiment9/outputs/cadd_downloaded_batch_audit.json).
 
 ## Method
 
@@ -40,7 +40,7 @@ AUCs below use the negative of each score and compare positives with random-nega
 | GWAS | ours | Conservation | 12,271 | 946,438 | 0.579 |
 | GWAS | ours | Combined | 12,271 | 946,438 | 0.598 |
 
-The full AUC table also reports the 31kbp, 6.3kbp, 710bp, and 360bp negative groups in [`unsupervised_auc.tsv`](https://huggingface.co/aer0vane/reproduce_deepsea/blob/main/experiment/experiment9/outputs/unsupervised_auc.tsv). A visual summary of all score/model combinations is in [`unsupervised_auc.png`](https://huggingface.co/aer0vane/reproduce_deepsea/blob/main/experiment/experiment9/outputs/unsupervised_auc.png). The two requested single-score panels are in [`suppfig6_pretrained.png`](https://huggingface.co/aer0vane/reproduce_deepsea/blob/main/experiment/experiment9/outputs/suppfig6_pretrained.png) and [`suppfig6_ours.png`](https://huggingface.co/aer0vane/reproduce_deepsea/blob/main/experiment/experiment9/outputs/suppfig6_ours.png); their x-axis labels use the cohort-specific mean distances measured in the reused evaluation sets, and n is the number of positive complete cases.
+The full AUC table also reports the 31kbp, 6.3kbp, 710bp, and 360bp negative groups in [`unsupervised_auc.tsv`](https://github.com/anaerovane/ReproduceDeepsea/blob/main/experiment/experiment9/outputs/unsupervised_auc.tsv). The two requested single-score panels are in [`suppfig6_pretrained.png`](https://github.com/anaerovane/ReproduceDeepsea/blob/main/experiment/experiment9/outputs/suppfig6_pretrained.png) and [`suppfig6_ours.png`](https://github.com/anaerovane/ReproduceDeepsea/blob/main/experiment/experiment9/outputs/suppfig6_ours.png); their x-axis labels use the cohort-specific mean distances measured in the reused evaluation sets, and n is the number of positive complete cases.
 
 ## Interpretation limits
 
@@ -50,5 +50,5 @@ These are unsupervised ranking results, not classifier results. AUCs against ran
 
 - [`analyze_cadd.py`](analyze_cadd.py): scoring and metric pipeline.
 - [`eqtl_unsupervised_pretrained.tsv.gz`](https://huggingface.co/aer0vane/reproduce_deepsea/blob/main/experiment/experiment9/outputs/eqtl_unsupervised_pretrained.tsv.gz), [`eqtl_unsupervised_ours.tsv.gz`](https://huggingface.co/aer0vane/reproduce_deepsea/blob/main/experiment/experiment9/outputs/eqtl_unsupervised_ours.tsv.gz), [`gwas_unsupervised_pretrained.tsv.gz`](https://huggingface.co/aer0vane/reproduce_deepsea/blob/main/experiment/experiment9/outputs/gwas_unsupervised_pretrained.tsv.gz), [`gwas_unsupervised_ours.tsv.gz`](https://huggingface.co/aer0vane/reproduce_deepsea/blob/main/experiment/experiment9/outputs/gwas_unsupervised_ours.tsv.gz): per-row features, E-values, and scores.
-- [`unsupervised_auc.tsv`](https://huggingface.co/aer0vane/reproduce_deepsea/blob/main/experiment/experiment9/outputs/unsupervised_auc.tsv), [`annotation_coverage.tsv`](https://huggingface.co/aer0vane/reproduce_deepsea/blob/main/experiment/experiment9/outputs/annotation_coverage.tsv): metric and annotation coverage tables.
-- [`analysis_manifest.json`](https://huggingface.co/aer0vane/reproduce_deepsea/blob/main/experiment/experiment9/outputs/analysis_manifest.json): source paths, completion snapshot, formulas, and limitations.
+- [`unsupervised_auc.tsv`](https://github.com/anaerovane/ReproduceDeepsea/blob/main/experiment/experiment9/outputs/unsupervised_auc.tsv), [`annotation_coverage.tsv`](https://github.com/anaerovane/ReproduceDeepsea/blob/main/experiment/experiment9/outputs/annotation_coverage.tsv): metric and annotation coverage tables.
+- [`analysis_manifest.json`](https://github.com/anaerovane/ReproduceDeepsea/blob/main/experiment/experiment9/outputs/analysis_manifest.json): source paths, completion snapshot, formulas, and limitations.
