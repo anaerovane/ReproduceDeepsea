@@ -15,10 +15,10 @@
 运行（在项目根目录；先准备序列）：
 
 ```bash
-python experiment/Supplementary_Figure3/prepare_sequences.py
-python experiment/Supplementary_Figure3/experiment6_saturation_full.py
+python deepsea/fuxian3/experiment/Supplementary_Figure3/prepare_sequences.py
+python deepsea/fuxian3/experiment/Supplementary_Figure3/experiment6_saturation_full.py
 # 仅从最终效应缓存重绘
-python experiment/Supplementary_Figure3/experiment6_plot.py
+python deepsea/fuxian3/experiment/Supplementary_Figure3/experiment6_plot.py
 ```
 
-数据：experiment6_all_data.npz 保存效应；experiment6_raw_predictions.npz 保存原始和突变预测；两张图各输出 PNG 和 PDF。
+数据：`results/experiment6_all_data.npz` 保存效应；`results/experiment6_raw_predictions.npz` 保存原始和突变预测。两份大缓存发布在 Hugging Face 的 `experiment/Supplementary_Figure3/results/`；两张最终图在本目录各输出 PNG 和 PDF。
