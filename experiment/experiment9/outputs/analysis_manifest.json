@@ -1,0 +1,63 @@
+{
+  "analysis": "unsupervised functional significance using all returned CADD inclAnno batches",
+  "as_of_utc": "2026-10-06T17:25:24+00:00",
+  "cadd_status_snapshot": {
+    "completed": 24,
+    "total": 24,
+    "last_checked_utc": "2026-10-06T16:37:41+00:00"
+  },
+  "downloaded_batches": [
+    "cadd_inclAnno_batch_01.tsv.gz",
+    "cadd_inclAnno_batch_02.tsv.gz",
+    "cadd_inclAnno_batch_03.tsv.gz",
+    "cadd_inclAnno_batch_04.tsv.gz",
+    "cadd_inclAnno_batch_05.tsv.gz",
+    "cadd_inclAnno_batch_06.tsv.gz",
+    "cadd_inclAnno_batch_07.tsv.gz",
+    "cadd_inclAnno_batch_08.tsv.gz",
+    "cadd_inclAnno_batch_09.tsv.gz",
+    "cadd_inclAnno_batch_10.tsv.gz",
+    "cadd_inclAnno_batch_11.tsv.gz",
+    "cadd_inclAnno_batch_12.tsv.gz",
+    "cadd_inclAnno_batch_13.tsv.gz",
+    "cadd_inclAnno_batch_14.tsv.gz",
+    "cadd_inclAnno_batch_15.tsv.gz",
+    "cadd_inclAnno_batch_16.tsv.gz",
+    "cadd_inclAnno_batch_17.tsv.gz",
+    "cadd_inclAnno_batch_18.tsv.gz",
+    "cadd_inclAnno_batch_19.tsv.gz",
+    "cadd_inclAnno_batch_20.tsv.gz",
+    "cadd_inclAnno_batch_21.tsv.gz",
+    "cadd_inclAnno_batch_22.tsv.gz",
+    "cadd_inclAnno_batch_23.tsv.gz",
+    "cadd_inclAnno_batch_24.tsv.gz"
+  ],
+  "downloaded_unique_cadd_variants": 1855578,
+  "feature_source": "experiment/Figure3/outputs",
+  "feature_note": "Uses existing Figure3 local-inference effect matrices; no new model inference was run.",
+  "models": {
+    "pretrained": "/home/wuzheng/IOC/deepsea/fuxian3/experiment/Figure3/outputs/pretrained_effects.npy",
+    "ours": "/home/wuzheng/IOC/deepsea/fuxian3/experiment/Figure3/outputs/ours_effects.npy"
+  },
+  "chromatin_effect_magnitude": "abs(P_ref-P_alt) * abs(logit(P_ref)-logit(P_alt)); 919 chromatin tracks",
+  "background": "Unique Random negative SNP variants separately within each GRASP eQTL and GWAS cohort",
+  "empirical_evalue": "(number of background scores strictly greater + 1)/(number of nonmissing background scores + 1); add-one smoothing for geometric means",
+  "conservation_direction": "Scores use their reported direction; each E-value is the background proportion with a higher score, following DeepSEA.",
+  "geometric_scores": "chromatin score = geometric mean of 919 E-values; conservation score = geometric mean of four E-values; combined score = their product",
+  "metric_direction": "lower functional significance score indicates greater significance; AUC calculated using its negative",
+  "limitations": [
+    "All 24 CADD batches returned; 3 of 1,855,581 submitted unique SNVs have no returned CADD record.",
+    "The effect universe has 123 variants not included in the CADD VCF; these remain unannotated in this experiment.",
+    "3 returned records lack all four required conservation values.",
+    "Individual conservation fields have missing values; conservation and combined AUCs use rows complete for all four fields.",
+    "These complete-case AUCs describe the returned cohort rows and are not unbiased estimates if missingness is systematic.",
+    "No classifier was trained; effect matrices were reused from Figure3 and no new inference was run."
+  ],
+  "analysis_effect_universe_variants": 1855704,
+  "cadd_vcf_submitted_unique_variants": 1855581,
+  "analysis_universe_not_submitted_to_cadd": 123,
+  "submitted_variants_without_returned_cadd_record": 3,
+  "returned_variants_missing_all_four_cadd_fields": 3,
+  "analysis_universe_variants_without_any_cadd_record": 126,
+  "analysis_universe_variants_without_any_usable_cadd_score": 129
+}
