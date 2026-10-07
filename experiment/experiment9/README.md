@@ -6,13 +6,14 @@ The completed analysis uses GRASP eQTL and GWAS Catalog cohorts. HGMD is unavail
 
 - `analyze_cadd.py`, `audit_cadd_batches.py`, `collect_cadd_annotations.py`, and the two plotting scripts are the maintained code.
 - `inputs/eqtl_gwas_variants_for_cadd_inclAnno.vcf.gz` is the submitted cohort VCF. It is a generated input, not a publisher source file.
-- `outputs/` contains the 24 CADD returns, complete per-variant scores, audit/coverage tables, manifests, and final figures.
+- `outputs/` on Hugging Face contains the 24 CADD returns and complete per-variant score files. Compact audit tables, the AUC summary, and final Figure 6 panels are on GitHub under `outputs/`.
 - The full method, metrics, and limitations are in [`FULL_ANALYSIS.md`](FULL_ANALYSIS.md).
 
 ## Remote copies
 
 - **GitHub (code and documentation):** [ReproduceDeepsea/experiment/experiment9](https://github.com/anaerovane/ReproduceDeepsea/tree/main/experiment/experiment9)
-- **Hugging Face (generated input and complete results):** [experiment/experiment9](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/experiment9)
+- **GitHub (compact results and final panels):** [experiment/experiment9/outputs](https://github.com/anaerovane/ReproduceDeepsea/tree/main/experiment/experiment9/outputs)
+- **Hugging Face (generated input and full result files):** [experiment/experiment9](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/experiment9)
 
 The large `inputs/` and `outputs/` files are stored on Hugging Face; they are not duplicated in the GitHub repository. To restore them locally, use `hf download aer0vane/reproduce_deepsea --repo-type model --include 'experiment/experiment9/**' --local-dir .` from the repository root.
 
