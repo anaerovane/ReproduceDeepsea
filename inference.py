@@ -74,8 +74,10 @@ def main() -> None:
     absent = [str(src) for src in outputs.values() if not src.is_file()]
     if absent:
         raise FileNotFoundError("inference runners did not produce expected files:\n  " + "\n  ".join(absent))
+    output_dir = HERE / "experiment" / "Figure2" / "outputs"
+    output_dir.mkdir(parents=True, exist_ok=True)
     for filename, source in outputs.items():
-        destination = HERE / filename
+        destination = output_dir / filename
         if source.resolve() != destination.resolve():
             shutil.copy2(source, destination)
         print(f"Saved {destination} ({destination.stat().st_size:,} bytes)")
