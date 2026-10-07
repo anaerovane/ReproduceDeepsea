@@ -23,3 +23,10 @@ DeepSEA reproduction project.
 - [Large inference outputs on Hugging Face](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Figure3/outputs)
 - [Figure 3 publication links and restore command](experiment/Figure3/REPOSITORIES.md)
 - [Paper](https://www.nature.com/articles/nmeth.3547)
+## Figure 2
+
+[Figure 2 plotting and data guide](experiment/Figure2/README.md)
+
+- The root `plot.py` redraws pretrained and ours plots from the organized artifact paths.
+- The root `inference.py` writes generated NPY caches to `experiment/Figure2/outputs/`.
+- [Figure 2 prediction caches and source input on Hugging Face](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Figure2)
