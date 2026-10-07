@@ -1,0 +1,332 @@
+{
+  "device": "cuda",
+  "reference": "local reference_genome FASTA; coordinates interpreted as 1-based",
+  "window": "1000 bp, [pos-500, pos+499] around 1-based SNP position",
+  "models": {
+    "ours_epoch53": {
+      "path": "Hugging Face: aer0vane/reproduce_deepsea/training_checkpoints/best_model_FINAL_EPOCH53.pth",
+      "sha256": "5979e5b48ef892b76f23aa3af4149787e8f7a0ef5f5bfef5e676997a6c1731bb"
+    },
+    "pretrained": {
+      "path": "DeepSEA pretrained checkpoint resolved by model_assets.py (Zenodo record 1466993 / Hugging Face cache)",
+      "sha256": "347c742703a75f07e9abd6c77409fe754fb1a3b3736ccdb6569784f56116453a"
+    }
+  },
+  "variants": [
+    {
+      "id": "rs4784227",
+      "chrom": "chr16",
+      "pos_1based": 52599188,
+      "ref": "C",
+      "alt": "T",
+      "reported_factor": "FOXA1",
+      "local_manifest_factor": "FOXA2",
+      "observed_reference": "C",
+      "window_ref": "GGGCTCAAGCAGTCCTCCCATCTAGGCTTCCCAAAATGCTGGGATTACAGACATGAGCCACTGCACCCAGCCACAAAGATAACCTAAAGATGTGTTTACTTTGACCCAGGCAGTAGTTTAAAAAAGTTTTAATTTGTTGTTCACATTTAAAAACTGGACAATTTCTACATAAAAATCTGAATTACTCATGTCTCTTAAAAAAATAACATCTAGCAATGGTAGGCCCACATTCCTTCCTGAAAATAATTAGCTGGGAAAGAGTAGGGACTGACCCCTTTAGACACGGTATAAATAGCATGGGAGTTGATCAGTAAATATTTGCTGAATGAAAGAATACATGAATGAAAAGTCAGAGCCCTATAGGTCAGCATGGACGGCGGTAAAGGAACCTGGCTGAGCCTGAAAGAGAATGTGATCTAAGATTAAATCCAGGATATGCTGGTAAATGTTTAACAGCCAACTCTTTGGGGAGGAAAAAAGTCCCAATTTGTAGTGTTTGCCGATTATTGTGATGTAAATACTCCCATCATGACCAATTTCAAGCTACCAACATGCTGACACTGAACTTGGAGTTGGAAGGAGATGAACAGGCATAATCAGGTCTCGTGAGATGGCCCAAGCCGGCCCCAGCACTCCACTGTTATATATGAGGCTAGAATTACTACATAACTGGAATAGCAACTTTCTGGACCATATGCCTGGAACACAGCAGGTGCTGAATAAATGTTTGTTGATCCAGGAACTGACTGTGTTGAAGCCCACAGATGGGAAATCAGTAGAAGGCAGGTAAGAGTAAAAAGAAGGGCAGAGAATTGGGGGTACAGACCCCTGAACCATAAGTCAGAGGAATGTTGTACATGTTTTCAGATCCCTCACTGGTCAAATGAAGGCAAAGGGTTAGATCTCTCCAAATCTTTAGAGGGACATGATGTAACTCCATTAAGTAACTCAGTGATTTTCAACATTAAAAAGTGTAATTATCTTTTCAAACTAAATATTA",
+      "window_alt": "GGGCTCAAGCAGTCCTCCCATCTAGGCTTCCCAAAATGCTGGGATTACAGACATGAGCCACTGCACCCAGCCACAAAGATAACCTAAAGATGTGTTTACTTTGACCCAGGCAGTAGTTTAAAAAAGTTTTAATTTGTTGTTCACATTTAAAAACTGGACAATTTCTACATAAAAATCTGAATTACTCATGTCTCTTAAAAAAATAACATCTAGCAATGGTAGGCCCACATTCCTTCCTGAAAATAATTAGCTGGGAAAGAGTAGGGACTGACCCCTTTAGACACGGTATAAATAGCATGGGAGTTGATCAGTAAATATTTGCTGAATGAAAGAATACATGAATGAAAAGTCAGAGCCCTATAGGTCAGCATGGACGGCGGTAAAGGAACCTGGCTGAGCCTGAAAGAGAATGTGATCTAAGATTAAATCCAGGATATGCTGGTAAATGTTTAACAGCCAACTCTTTGGGGAGGAAAAAAGTCCCAATTTGTAGTGTTTGCTGATTATTGTGATGTAAATACTCCCATCATGACCAATTTCAAGCTACCAACATGCTGACACTGAACTTGGAGTTGGAAGGAGATGAACAGGCATAATCAGGTCTCGTGAGATGGCCCAAGCCGGCCCCAGCACTCCACTGTTATATATGAGGCTAGAATTACTACATAACTGGAATAGCAACTTTCTGGACCATATGCCTGGAACACAGCAGGTGCTGAATAAATGTTTGTTGATCCAGGAACTGACTGTGTTGAAGCCCACAGATGGGAAATCAGTAGAAGGCAGGTAAGAGTAAAAAGAAGGGCAGAGAATTGGGGGTACAGACCCCTGAACCATAAGTCAGAGGAATGTTGTACATGTTTTCAGATCCCTCACTGGTCAAATGAAGGCAAAGGGTTAGATCTCTCCAAATCTTTAGAGGGACATGATGTAACTCCATTAAGTAACTCAGTGATTTTCAACATTAAAAAGTGTAATTATCTTTTCAAACTAAATATTA",
+      "factor_predictions": {
+        "ours_epoch53": {
+          "FOXA1": [
+            {
+              "index": 178,
+              "predictor": "A549_FOXA1_DEX_100nM",
+              "ref_probability": 0.018330220133066177,
+              "alt_probability": 0.02348214015364647,
+              "delta": 0.005151920020580292,
+              "direction": "increase"
+            },
+            {
+              "index": 201,
+              "predictor": "ECC-1_FOXA1_DMSO_0.02pct",
+              "ref_probability": 0.0035335910506546497,
+              "alt_probability": 0.004072408191859722,
+              "delta": 0.0005388171412050724,
+              "direction": "increase"
+            },
+            {
+              "index": 302,
+              "predictor": "HepG2_FOXA1_None",
+              "ref_probability": 0.046843238174915314,
+              "alt_probability": 0.05728854984045029,
+              "delta": 0.010445311665534973,
+              "direction": "increase"
+            },
+            {
+              "index": 303,
+              "predictor": "HepG2_FOXA1_None",
+              "ref_probability": 0.06550880521535873,
+              "alt_probability": 0.08409416675567627,
+              "delta": 0.018585361540317535,
+              "direction": "increase"
+            },
+            {
+              "index": 396,
+              "predictor": "T-47D_FOXA1_DMSO_0.02pct",
+              "ref_probability": 0.06714080274105072,
+              "alt_probability": 0.0913652554154396,
+              "delta": 0.024224452674388885,
+              "direction": "increase"
+            }
+          ],
+          "FOXA2": [
+            {
+              "index": 304,
+              "predictor": "HepG2_FOXA2_None",
+              "ref_probability": 0.06296703964471817,
+              "alt_probability": 0.07771089673042297,
+              "delta": 0.014743857085704803,
+              "direction": "increase"
+            }
+          ]
+        },
+        "pretrained": {
+          "FOXA1": [
+            {
+              "index": 178,
+              "predictor": "A549_FOXA1_DEX_100nM",
+              "ref_probability": 0.013689445331692696,
+              "alt_probability": 0.019727913662791252,
+              "delta": 0.0060384683310985565,
+              "direction": "increase"
+            },
+            {
+              "index": 201,
+              "predictor": "ECC-1_FOXA1_DMSO_0.02pct",
+              "ref_probability": 0.003884538309648633,
+              "alt_probability": 0.005046963691711426,
+              "delta": 0.0011624253820627928,
+              "direction": "increase"
+            },
+            {
+              "index": 302,
+              "predictor": "HepG2_FOXA1_None",
+              "ref_probability": 0.050278473645448685,
+              "alt_probability": 0.07738572359085083,
+              "delta": 0.027107249945402145,
+              "direction": "increase"
+            },
+            {
+              "index": 303,
+              "predictor": "HepG2_FOXA1_None",
+              "ref_probability": 0.050772637128829956,
+              "alt_probability": 0.07982409000396729,
+              "delta": 0.02905145287513733,
+              "direction": "increase"
+            },
+            {
+              "index": 396,
+              "predictor": "T-47D_FOXA1_DMSO_0.02pct",
+              "ref_probability": 0.047155946493148804,
+              "alt_probability": 0.06565190851688385,
+              "delta": 0.018495962023735046,
+              "direction": "increase"
+            }
+          ],
+          "FOXA2": [
+            {
+              "index": 304,
+              "predictor": "HepG2_FOXA2_None",
+              "ref_probability": 0.050632722675800323,
+              "alt_probability": 0.07712385058403015,
+              "delta": 0.026491127908229828,
+              "direction": "increase"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "alpha_thalassemia_chr16_209709",
+      "chrom": "chr16",
+      "pos_1based": 209709,
+      "ref": "T",
+      "alt": "C",
+      "reported_factor": "GATA1",
+      "local_manifest_factor": "GATA1",
+      "observed_reference": "T",
+      "window_ref": "GGGGCTTAGACAGAGGAGGGGAGGATTCAGATTTTAAATGGGTTGGCCACTGTAGGTCTATTAACGTGGTGACATTTGAGGGAGTGGCAATACTAGGGAAGGGGCTTCAGGGGAGTGGCCAGGAGCTAGGGATAGAGGGAGGGAGGACAGGAGGCCTTGTCTGTCTTTTCCTCCATATGTAAGTTTCAGGAGTGAGTGGGGGGTGTCGAGGGTGCTGTGCTCTCCGGCCTGAGCCTCAGGAAGGAAGGGCAGTAGTCAGGGATGCCAGGGAAGGACAGTGGAGTAGGCTTTGTGGGGAACTTCACGGTTCCATTGTTGAGATGATTTGCTGGAGACACACAGATGAGGACATCAAATACATCCCTGGATCAGGCCCTGGGGCCTGAGTCCGGAAGAGAGGTCTGTATGGACACACCCATCAATGGGAGCACCAGGACACAGATGGAGGCTAATGTCATGTTGTAGACAGGATGGGTGCTGAGCTGCCACACCCACATTATTAGAAAATAACAGCACAGGCTTGGGGTGGAGGCGGGACACAAGACTAGCCAGAAGGAGAAAGAAAGGTGAAAAGCTGTTGGTGCAAGGAAGCTCTTGGTATTTCCAATGGCTTGGGCACAGGCTGTGAGGGTGCCTGGGACGGCTTGTGGGGCACAGGCTGCAAGAGGTGCCCAGGACGGCTTGTGGGGCACAGGTTGTGAGAGGTGCCCTGGACGGCTTGTGGGGCACAGGCTGTGAGAGGTGCCCAGGACGGCTTGTGGGGCACAGGCTGTGAGGGTGCCCGGGACGGCTTGTGGGGCACAGGTTGTGAGAGGTGCCCGGGACGGCTTGTGGGGCACAGGTTTCAGAGGTGCCCGGGACGGCTTGTGGGGCACAGGTTGTGAGAGGTGCCCGGGACGGCTTGTGGGACACAGGTTGTGAGAGGTGCCTGGGACGGCTTGTGGGGCACAGGCTGTGAGGGTGCCTGGGACGGCTTGTGGGGCACAGGTTGTGAGAGGTG",
+      "window_alt": "GGGGCTTAGACAGAGGAGGGGAGGATTCAGATTTTAAATGGGTTGGCCACTGTAGGTCTATTAACGTGGTGACATTTGAGGGAGTGGCAATACTAGGGAAGGGGCTTCAGGGGAGTGGCCAGGAGCTAGGGATAGAGGGAGGGAGGACAGGAGGCCTTGTCTGTCTTTTCCTCCATATGTAAGTTTCAGGAGTGAGTGGGGGGTGTCGAGGGTGCTGTGCTCTCCGGCCTGAGCCTCAGGAAGGAAGGGCAGTAGTCAGGGATGCCAGGGAAGGACAGTGGAGTAGGCTTTGTGGGGAACTTCACGGTTCCATTGTTGAGATGATTTGCTGGAGACACACAGATGAGGACATCAAATACATCCCTGGATCAGGCCCTGGGGCCTGAGTCCGGAAGAGAGGTCTGTATGGACACACCCATCAATGGGAGCACCAGGACACAGATGGAGGCTAATGTCATGTTGTAGACAGGATGGGTGCTGAGCTGCCACACCCACATTATCAGAAAATAACAGCACAGGCTTGGGGTGGAGGCGGGACACAAGACTAGCCAGAAGGAGAAAGAAAGGTGAAAAGCTGTTGGTGCAAGGAAGCTCTTGGTATTTCCAATGGCTTGGGCACAGGCTGTGAGGGTGCCTGGGACGGCTTGTGGGGCACAGGCTGCAAGAGGTGCCCAGGACGGCTTGTGGGGCACAGGTTGTGAGAGGTGCCCTGGACGGCTTGTGGGGCACAGGCTGTGAGAGGTGCCCAGGACGGCTTGTGGGGCACAGGCTGTGAGGGTGCCCGGGACGGCTTGTGGGGCACAGGTTGTGAGAGGTGCCCGGGACGGCTTGTGGGGCACAGGTTTCAGAGGTGCCCGGGACGGCTTGTGGGGCACAGGTTGTGAGAGGTGCCCGGGACGGCTTGTGGGACACAGGTTGTGAGAGGTGCCTGGGACGGCTTGTGGGGCACAGGCTGTGAGGGTGCCTGGGACGGCTTGTGGGGCACAGGTTGTGAGAGGTG",
+      "factor_predictions": {
+        "ours_epoch53": {
+          "GATA1": [
+            {
+              "index": 622,
+              "predictor": "K562_GATA-1_None",
+              "ref_probability": 0.00032033014576882124,
+              "alt_probability": 0.012883322313427925,
+              "delta": 0.012562992051243782,
+              "direction": "increase"
+            },
+            {
+              "index": 707,
+              "predictor": "PBDEFetal_GATA-1_None",
+              "ref_probability": 0.00017910436145029962,
+              "alt_probability": 0.006258763372898102,
+              "delta": 0.00607965886592865,
+              "direction": "increase"
+            },
+            {
+              "index": 708,
+              "predictor": "PBDE_GATA-1_None",
+              "ref_probability": 0.006944518536329269,
+              "alt_probability": 0.15708871185779572,
+              "delta": 0.15014418959617615,
+              "direction": "increase"
+            }
+          ]
+        },
+        "pretrained": {
+          "GATA1": [
+            {
+              "index": 622,
+              "predictor": "K562_GATA-1_None",
+              "ref_probability": 0.0013724341988563538,
+              "alt_probability": 0.01381717249751091,
+              "delta": 0.012444738298654556,
+              "direction": "increase"
+            },
+            {
+              "index": 707,
+              "predictor": "PBDEFetal_GATA-1_None",
+              "ref_probability": 0.0008461472461931407,
+              "alt_probability": 0.006852695252746344,
+              "delta": 0.006006548181176186,
+              "direction": "increase"
+            },
+            {
+              "index": 708,
+              "predictor": "PBDE_GATA-1_None",
+              "ref_probability": 0.012022369541227818,
+              "alt_probability": 0.0679752379655838,
+              "delta": 0.05595286935567856,
+              "direction": "increase"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pancreatic_agenesis_chr10_23508363",
+      "chrom": "chr10",
+      "pos_1based": 23508363,
+      "ref": "A",
+      "alt": "G",
+      "reported_factor": "FOXA2",
+      "local_manifest_factor": "FOXA1",
+      "observed_reference": "A",
+      "window_ref": "ACTTCTTTTTATCTCTTAACTAACTTACAATTTCTTACGTGATTTTAAAACTTGTTTTTCTATTTAAAACAACAGGGGCAACTGAACTTCACTTTCAAACAATATTTATTTCTATAAATCAGTGCAAAACATACTTATTGAAAATATATCTTGGGTCCAAGGCTTCAAAGGGTAAAAAGAAAGATTTTAAATTATATCTAATATGTTACAATTGTTCTGTCCTTTAAAAACCTTTTCAGATCACCCCCTGGATGATTCTTCCCTAGAAGTCTCAGAGAATTAACAACACAATGTAATCTAGGTTTAAATTTGGGTTTCTCCTGTGTTTCAGATACTGATGTTTGAGCTTTCTCTTCCTGACAAGCCACTTAAAGAGTCACTGTTACTTTGAGGTTTTATCTGTAAGATTCGTGTCTTTTGGGCTCATTAAGAACATTTCCAAAGATTACAATGTCAATAGCACCTAATTACTGGACTGTGAGAAAGGTCTTCTTGAGTACATAAAATCTGTGGCAGTGCACAGTACACAATGGGCAGCTCAGATCCCAAATTTTATCACAAGTAAGTAGCAAACAAATTAATAATGTTACCTGTGCTCTCTTGGATAATTACTACTGCATAAAAACTGCTTTGAAATGTTGCAGATAGTATTGTACCTCATTTTTTTAATCCCCTTAGAGTAACAAGGATTTATTTGTCTCAAACTTTCTATGTTGCATGCACCACTTGACTTTCTTGTTCTGTTTAGAATTTTTAGAACTTGCAACATAACAAAAAATCATTTTTAACCAGCCTAGGAAGGACATATCACCTGATGTAACATTATTTTAAATTATATTTTGTATTTTACTTTACTCTTTTCAAAACATATACTGTATGTTTTGATACTATTGCTAGATTTTATTTTTTACTTATGCCTGGTAGAAAATCAGCTATTAAAGAAGCAGAGGAGGCTGGACACAGTGGTTCATGTCTGTAATCGCTAGCACTTTGAAAGAGT",
+      "window_alt": "ACTTCTTTTTATCTCTTAACTAACTTACAATTTCTTACGTGATTTTAAAACTTGTTTTTCTATTTAAAACAACAGGGGCAACTGAACTTCACTTTCAAACAATATTTATTTCTATAAATCAGTGCAAAACATACTTATTGAAAATATATCTTGGGTCCAAGGCTTCAAAGGGTAAAAAGAAAGATTTTAAATTATATCTAATATGTTACAATTGTTCTGTCCTTTAAAAACCTTTTCAGATCACCCCCTGGATGATTCTTCCCTAGAAGTCTCAGAGAATTAACAACACAATGTAATCTAGGTTTAAATTTGGGTTTCTCCTGTGTTTCAGATACTGATGTTTGAGCTTTCTCTTCCTGACAAGCCACTTAAAGAGTCACTGTTACTTTGAGGTTTTATCTGTAAGATTCGTGTCTTTTGGGCTCATTAAGAACATTTCCAAAGATTACAATGTCAATAGCACCTAATTACTGGACTGTGAGAAAGGTCTTCTTGAGTACGTAAAATCTGTGGCAGTGCACAGTACACAATGGGCAGCTCAGATCCCAAATTTTATCACAAGTAAGTAGCAAACAAATTAATAATGTTACCTGTGCTCTCTTGGATAATTACTACTGCATAAAAACTGCTTTGAAATGTTGCAGATAGTATTGTACCTCATTTTTTTAATCCCCTTAGAGTAACAAGGATTTATTTGTCTCAAACTTTCTATGTTGCATGCACCACTTGACTTTCTTGTTCTGTTTAGAATTTTTAGAACTTGCAACATAACAAAAAATCATTTTTAACCAGCCTAGGAAGGACATATCACCTGATGTAACATTATTTTAAATTATATTTTGTATTTTACTTTACTCTTTTCAAAACATATACTGTATGTTTTGATACTATTGCTAGATTTTATTTTTTACTTATGCCTGGTAGAAAATCAGCTATTAAAGAAGCAGAGGAGGCTGGACACAGTGGTTCATGTCTGTAATCGCTAGCACTTTGAAAGAGT",
+      "factor_predictions": {
+        "ours_epoch53": {
+          "FOXA1": [
+            {
+              "index": 178,
+              "predictor": "A549_FOXA1_DEX_100nM",
+              "ref_probability": 0.024073002859950066,
+              "alt_probability": 0.013523859903216362,
+              "delta": -0.010549142956733704,
+              "direction": "decrease"
+            },
+            {
+              "index": 201,
+              "predictor": "ECC-1_FOXA1_DMSO_0.02pct",
+              "ref_probability": 0.008423137478530407,
+              "alt_probability": 0.005555061623454094,
+              "delta": -0.002868075855076313,
+              "direction": "decrease"
+            },
+            {
+              "index": 302,
+              "predictor": "HepG2_FOXA1_None",
+              "ref_probability": 0.1361403465270996,
+              "alt_probability": 0.06916702538728714,
+              "delta": -0.06697332113981247,
+              "direction": "decrease"
+            },
+            {
+              "index": 303,
+              "predictor": "HepG2_FOXA1_None",
+              "ref_probability": 0.2237023115158081,
+              "alt_probability": 0.11475028842687607,
+              "delta": -0.10895202308893204,
+              "direction": "decrease"
+            },
+            {
+              "index": 396,
+              "predictor": "T-47D_FOXA1_DMSO_0.02pct",
+              "ref_probability": 0.2606934607028961,
+              "alt_probability": 0.14902766048908234,
+              "delta": -0.11166580021381378,
+              "direction": "decrease"
+            }
+          ],
+          "FOXA2": [
+            {
+              "index": 304,
+              "predictor": "HepG2_FOXA2_None",
+              "ref_probability": 0.153163343667984,
+              "alt_probability": 0.07882744818925858,
+              "delta": -0.07433589547872543,
+              "direction": "decrease"
+            }
+          ]
+        },
+        "pretrained": {
+          "FOXA1": [
+            {
+              "index": 178,
+              "predictor": "A549_FOXA1_DEX_100nM",
+              "ref_probability": 0.015196135267615318,
+              "alt_probability": 0.010701935738325119,
+              "delta": -0.004494199529290199,
+              "direction": "decrease"
+            },
+            {
+              "index": 201,
+              "predictor": "ECC-1_FOXA1_DMSO_0.02pct",
+              "ref_probability": 0.007379221264272928,
+              "alt_probability": 0.005633254535496235,
+              "delta": -0.0017459667287766933,
+              "direction": "decrease"
+            },
+            {
+              "index": 302,
+              "predictor": "HepG2_FOXA1_None",
+              "ref_probability": 0.052543748170137405,
+              "alt_probability": 0.03703955560922623,
+              "delta": -0.015504192560911179,
+              "direction": "decrease"
+            },
+            {
+              "index": 303,
+              "predictor": "HepG2_FOXA1_None",
+              "ref_probability": 0.06882486492395401,
+              "alt_probability": 0.04714169353246689,
+              "delta": -0.02168317139148712,
+              "direction": "decrease"
+            },
+            {
+              "index": 396,
+              "predictor": "T-47D_FOXA1_DMSO_0.02pct",
+              "ref_probability": 0.0942833349108696,
+              "alt_probability": 0.06678155809640884,
+              "delta": -0.027501776814460754,
+              "direction": "decrease"
+            }
+          ],
+          "FOXA2": [
+            {
+              "index": 304,
+              "predictor": "HepG2_FOXA2_None",
+              "ref_probability": 0.055920518934726715,
+              "alt_probability": 0.0393894724547863,
+              "delta": -0.016531046479940414,
+              "direction": "decrease"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}
