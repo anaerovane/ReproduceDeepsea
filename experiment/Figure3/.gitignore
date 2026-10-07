@@ -1,0 +1,7 @@
+# Large generated arrays, per-variant tables and fold caches are proposed for Hugging Face.
+outputs/sequences.npy
+outputs/*_effects.npy
+outputs/*_fold*.npz
+outputs/*_fold*_classifier.json
+outputs/*.tsv
+outputs/*.tsv.gz

@@ -1,0 +1,24 @@
+{
+  "pretrained": {
+    "shape": [
+      1855704,
+      1838
+    ],
+    "valid_rows_checked": 1855581,
+    "all_effects_finite": true,
+    "absolute_effects_in_0_1": true,
+    "min": -8.21641731262207,
+    "max": 9.355460166931152
+  },
+  "ours": {
+    "shape": [
+      1855704,
+      1838
+    ],
+    "valid_rows_checked": 1855581,
+    "all_effects_finite": true,
+    "absolute_effects_in_0_1": true,
+    "min": -10.689958572387695,
+    "max": 11.667606353759766
+  }
+}

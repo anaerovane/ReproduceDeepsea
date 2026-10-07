@@ -1,0 +1,55 @@
+{
+  "coordinate_build": "GRCh37/hg19",
+  "gwava": {
+    "method": "GWAVA v1.0",
+    "official_source": "https://ftp.sanger.ac.uk/pub/resources/software/gwava/v1.0/VEP_plugin/gwava_scores.bed.gz",
+    "downloaded_mirror": "https://zenodo.org/records/3956168/files/GRCh37_gwava.bed.gz",
+    "score_file_sha256": "fc4f172378b3b646b8ebc394fb8e4aaad93239f472f9bd6771c0ba518bb3bec7",
+    "index_file_sha256": "57e2f5a4678b54f6da3bc51657dbc75577a5ac4c1b886068070627e835024003",
+    "index_size_bytes": 6151121,
+    "score_file_size_bytes": 726712688,
+    "source_column_order": [
+      "GWAVA_Region",
+      "GWAVA_TSS",
+      "GWAVA_Unmatched"
+    ],
+    "matching": "GRCh37 chromosome and 1-based position; sites with conflicting score triplets were excluded because this BED has no allele column",
+    "cohort_score_file": "gwava_GRCh37_scores.tsv.gz",
+    "cohort_score_sha256": "86e06fad82efe40d65ac7e82fdc8392b5849ac99c71486b8a81e0a491a9d9030"
+  },
+  "funseq2": {
+    "method": "FunSeq2 v2.1.0",
+    "source": "http://archive.gersteinlab.org/funseq2/hg19_wg_score.tsv.gz",
+    "track_size_bytes": 16203745143,
+    "index_source": "http://archive.gersteinlab.org/funseq2/hg19_wg_score.tsv.gz.tbi",
+    "cohort_score_file": "funseq2_v2.1.0_scores.tsv.gz",
+    "cohort_score_sha256": "2d41187067c98d17bcc945afb79cf3193a1d93077a83c7d85821c3201ce5138a",
+    "cohort_score_rows": 331979,
+    "status": "completed: full indexed track downloaded and cohort scores extracted",
+    "planned_match": "GRCh37 chromosome, position, reference, and alternate; generic dot-alt scores are used only when no allele-specific score is present",
+    "track_sha256": "b6c01fb03f55d1a185a36a3af84eb4b3967c849b56915409aebfd864d5c67861",
+    "index_sha256": "e5b58f506ae10f2789942a3b285282b534d69c8756b350287bfe02395fe4e4c1",
+    "index_size_bytes": 2712155
+  },
+  "evaluation": {
+    "all_random_negative_fraction": 0.05,
+    "random_seed": 42,
+    "distance_negative_groups": "complete",
+    "positive_rows": "complete",
+    "auc_comparison": "common complete cases across DeepSEA, CADD, three GWAVA models, and FunSeq2 after extraction"
+  },
+  "cadd": {
+    "method_label": "CADD PHRED (version unverified)",
+    "cohort_score_files": {
+      "eqtl_CADD_scores.tsv.gz": {
+        "sha256": "1073e8def8ee38b9f2e2ec1a95dadcd98e30c496c0f78ad5ec6b402af387dcf3",
+        "size_bytes": 19040955
+      },
+      "gwas_CADD_scores.tsv.gz": {
+        "sha256": "c9e16a9428c0f01c2a574d3b18d23b20d339ab0ad35f43679666694428bff208",
+        "size_bytes": 16908024
+      }
+    },
+    "provenance_limit": "The earlier filenames claimed v1.0, but no retained request/response manifest verifies the source version. Figures label this as CADD PHRED with version unverified."
+  }
+}

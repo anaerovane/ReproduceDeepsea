@@ -1,0 +1,28 @@
+{
+  "eqtl": {
+    "positive_negative_coordinate_overlap_rows": 16377,
+    "positive_negative_identical_allele_overlap_rows": 16377,
+    "max_folds_per_coordinate": 1,
+    "original_group_counts": {
+      "31kbp negative SNP": 9487,
+      "360bp negative SNP": 57457,
+      "6.3kbp negative SNP": 24060,
+      "710bp negative SNP": 44657,
+      "Random negative SNP": 955377,
+      "eQTL": 78613
+    }
+  },
+  "gwas": {
+    "positive_negative_coordinate_overlap_rows": 1924,
+    "positive_negative_identical_allele_overlap_rows": 1924,
+    "max_folds_per_coordinate": 1,
+    "original_group_counts": {
+      "31kbp negative SNP": 8131,
+      "360bp negative SNP": 11948,
+      "6.3kbp negative SNP": 10368,
+      "710bp negative SNP": 11523,
+      "GWAS Catalog": 12296,
+      "Random negative SNP": 962980
+    }
+  }
+}

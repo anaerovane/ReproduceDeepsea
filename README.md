@@ -16,3 +16,10 @@ DeepSEA reproduction project.
 
 - [Hugging Face trained gkm-SVM models and result artifacts](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Supplementary_Figure2)
 - [Original DeepSEA paper](https://www.nature.com/articles/nmeth.3547)
+## Figure 3 variant prioritization
+
+[Figure 3 code, figures, methods, and results summary](experiment/Figure3/README.md)
+
+- [Large inference outputs on Hugging Face](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Figure3/outputs)
+- [Figure 3 publication links and restore command](experiment/Figure3/REPOSITORIES.md)
+- [Paper](https://www.nature.com/articles/nmeth.3547)

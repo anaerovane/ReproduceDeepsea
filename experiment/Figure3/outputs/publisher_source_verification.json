@@ -1,0 +1,14 @@
+[
+  {
+    "file": "41592_2015_BFnmeth3547_MOESM649_ESM.csv",
+    "url": "https://static-content.springer-cdn.com/esm/art%3A10.1038%2Fnmeth.3547/MediaObjects/41592_2015_BFnmeth3547_MOESM649_ESM.csv",
+    "error": "HTTPSConnectionPool(host='static-content.springer-cdn.com', port=443): Max retries exceeded with url: /esm/art%3A10.1038%2Fnmeth.3547/MediaObjects/41592_2015_BFnmeth3547_MOESM649_ESM.csv (Caused by NameResolutionError(\"HTTPSConnection(host='static-content.springer-cdn.com', port=443): Failed to resolve 'static-content.springer-cdn.com' ([Errno -2] Name or service not known)\"))",
+    "local_sha256": "31b52eac88a0a142508a9ed7f50ac09f2bf53985d3428f8efbea64ce9b518300"
+  },
+  {
+    "file": "41592_2015_BFnmeth3547_MOESM650_ESM.csv",
+    "url": "https://static-content.springer-cdn.com/esm/art%3A10.1038%2Fnmeth.3547/MediaObjects/41592_2015_BFnmeth3547_MOESM650_ESM.csv",
+    "error": "HTTPSConnectionPool(host='static-content.springer-cdn.com', port=443): Max retries exceeded with url: /esm/art%3A10.1038%2Fnmeth.3547/MediaObjects/41592_2015_BFnmeth3547_MOESM650_ESM.csv (Caused by NameResolutionError(\"HTTPSConnection(host='static-content.springer-cdn.com', port=443): Failed to resolve 'static-content.springer-cdn.com' ([Errno -2] Name or service not known)\"))",
+    "local_sha256": "db7d30b3e490efbea1ebcb9ee5900a7c30dc94b6c53ccd40fd00b286e5838c8b"
+  }
+]

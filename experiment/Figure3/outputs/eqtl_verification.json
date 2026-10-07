@@ -1,0 +1,18 @@
+[
+  {
+    "task": "eqtl",
+    "model": "pretrained",
+    "rows": 1169587,
+    "oof_auc_recomputed": true,
+    "finite_predictions": true,
+    "same_position_same_fold": true
+  },
+  {
+    "task": "eqtl",
+    "model": "ours",
+    "rows": 1169587,
+    "oof_auc_recomputed": true,
+    "finite_predictions": true,
+    "same_position_same_fold": true
+  }
+]

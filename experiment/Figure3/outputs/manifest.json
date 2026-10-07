@@ -1,0 +1,48 @@
+{
+  "random_negative_cap": 0,
+  "method": "1838 ref/alt chromatin effects; strand effects averaged; gblinear; 10 supplied spatial folds",
+  "regularization_convention": "legacy summed-loss parameters divided by training weight sum for modern gblinear",
+  "classifier_solver": "GPU coordinate descent when CUDA available; cyclic features",
+  "missing": [
+    "HGMD 2014.4 original variants",
+    "four conservation features"
+  ],
+  "baseline_methods": [
+    "CADD PHRED (version unverified)",
+    "GWAVA v1.0 Unmatched/TSS/Region",
+    "FunSeq2 v2.1.0"
+  ],
+  "source": "https://www.nature.com/articles/nmeth.3547",
+  "inputs": {
+    "models/deepsea_predict.pth": "347c742703a75f07e9abd6c77409fe754fb1a3b3736ccdb6569784f56116453a",
+    "Hugging Face: aer0vane/reproduce_deepsea/training_checkpoints/best_model_FINAL_EPOCH53.pth": "5979e5b48ef892b76f23aa3af4149787e8f7a0ef5f5bfef5e676997a6c1731bb",
+    "newdata/41592_2015_BFnmeth3547_MOESM649_ESM.csv": "31b52eac88a0a142508a9ed7f50ac09f2bf53985d3428f8efbea64ce9b518300",
+    "newdata/41592_2015_BFnmeth3547_MOESM650_ESM.csv": "db7d30b3e490efbea1ebcb9ee5900a7c30dc94b6c53ccd40fd00b286e5838c8b"
+  },
+  "reference_genome_sha256": {
+    "chr1.fa": "0c19925c13b1312f0cbdc2b804f62da260345589b8f9e8ad655abfb5d6e99338",
+    "chr10.fa": "f97bc997f0bb8b5ab5cddab64f6c1a68ed057989949bc9c9ba7f1db836552c98",
+    "chr11.fa": "82d0f324f93e1f553c84927c009a648d8372cd00bf9d8728622a95bf4c452dfb",
+    "chr12.fa": "930b2cee70740859d9d3fe16d802d984e8e1e60a74765c83b6c09596eab5b41b",
+    "chr13.fa": "5a069811f17b33ab8c38e383d89d6fdc8feed5d22f0f25692b10f1ef3b86347d",
+    "chr14.fa": "64ead0a927aee1bbb71ad580d47d1e52e54c21f185b205e9d903a4629950573f",
+    "chr15.fa": "27f1e0bf1a462831c0bcbfdccb224fdbb0f7c39bef47ca7a6958d48f458215e5",
+    "chr16.fa": "2a3eb1697527d251c07aaaf6b9e7fd4b66404d8aa42215807c4227dd1e00ef2c",
+    "chr17.fa": "ab2f17ed39ac62147ffeafe0cbffdcbc11a87623e250b742094ee8f1d5a3bb87",
+    "chr18.fa": "86cc0ebbbc723111c933f6a1e9f395aca70dcc41cb3c3064c634ee0d4610faa0",
+    "chr19.fa": "83f48e4f4b355b940293dae838dd2599550e6a441711b74e5ac92ac8dd90133a",
+    "chr2.fa": "a2708580d67afd44c515b7014376827d6d4a7ffb75b00598da5842c77b313d5b",
+    "chr20.fa": "f54ed65b6709dd2534f1ecf720b92bcbdd7f181ed87229c3cb6f6206ef8f80f3",
+    "chr21.fa": "33f1357172a6265bb6fb82c7368e7e7efca11c303ca2e6cc25d70f6b44c5821a",
+    "chr22.fa": "45892c4a591a7f6728fc42a0d1564abf49f6df8f9c0f355b9fb9c6c2834c1bb6",
+    "chr3.fa": "5a5c25f62966c984e8049bffefef0f65fd80058cc2d2b5caf83db2fdee5b7d2d",
+    "chr4.fa": "60f9d24712524a92102a59e2736f9dc1067cb38cc3eb5f9d31c3326b63905397",
+    "chr5.fa": "6e13c75319a9d2af49f3675140ee453897eb4a486c0aaba77a3a6b924dbb7b2e",
+    "chr6.fa": "650c4cf4c65764d629a8be278cd26d5c128ab432633878be684357791e5d9c41",
+    "chr7.fa": "3c00c2336ce46cbc3e9602380cb8d39c0033e4a0d2026a0b5fca94f1085b8be9",
+    "chr8.fa": "92b1eacb8a636b3bc3f43b78ff97b5975d986d201330f420e97a32c4e5e8dcd2",
+    "chr9.fa": "f177a1396ed549186ea5490e3e115292257bce6a66325fe5120f0705a5ba2805",
+    "chrX.fa": "974ad7350673f30147714f50c994f9cf2fdd41d305cc6779d9c50eb9db8d5d54",
+    "chrY.fa": "3e7b4f2c7487b7296809641c926aa3c34dcc1ea3564b5f1a844a0942e7e075ba"
+  }
+}

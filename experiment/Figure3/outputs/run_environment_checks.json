@@ -1,0 +1,24 @@
+{
+  "python": "3.14.7",
+  "torch": "2.14.1+cu130",
+  "numpy": "2.5.3",
+  "pandas": "3.0.6",
+  "sklearn": "1.9.1",
+  "xgboost": "3.4.2",
+  "checks": {
+    "native_pretrained_max_abs_difference": 0.0,
+    "same_allele_max_abs_effect": 3.725290298461914e-09,
+    "same_allele_effect_tolerance": 1e-06,
+    "different_allele_finite_nonzero_effect": true,
+    "pretrained_predict_and_variant_backbones_identical": true,
+    "historical_regularization_verified": "v0.40 direct summed-loss penalties; modern penalties multiply by sum_instance_weight"
+  },
+  "script_sha256": {
+    "figure3_rerun.py": "2432347427b6816361c894002eadef8bd71de28b1b3ec0a0a1a3a046468ed605",
+    "deepsea_models.py": "942797e729aabad14e128a36b34936184c7c71785e1dacd62bf831aa74729a6f",
+    "retrieve_gwava_scores.py": "0c38af4fa00e2f7216b973d426bfd0f72699e642b26c0931bc0f815280b53afc",
+    "retrieve_funseq2_scores.py": "f3c880a637effcf8cbe1d42718d520dc6e7363b6257cb61afa6884836157314e"
+  },
+  "run_complete": true,
+  "completed_full_classifier_folds": 40
+}

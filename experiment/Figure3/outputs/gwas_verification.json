@@ -1,0 +1,18 @@
+[
+  {
+    "task": "gwas",
+    "model": "pretrained",
+    "rows": 1017172,
+    "oof_auc_recomputed": true,
+    "finite_predictions": true,
+    "same_position_same_fold": true
+  },
+  {
+    "task": "gwas",
+    "model": "ours",
+    "rows": 1017172,
+    "oof_auc_recomputed": true,
+    "finite_predictions": true,
+    "same_position_same_fold": true
+  }
+]
