@@ -1,0 +1,2030 @@
+{
+  "source": "CADD GRCh37-v1.4 inclAnno output; audited against submitted VCF by CHROM/POS/REF/ALT",
+  "submitted_unique_variants": 1855581,
+  "downloaded_files": 24,
+  "downloaded_batch_files": {
+    "cadd_inclAnno_batch_01.tsv.gz": {
+      "sha256": "a760c6a8db8523c00dd1b2fe277355f0420160363cf3b6dfaf480a777814b715",
+      "rows": 79998,
+      "unique_variants": 79998,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 79998,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 187,
+        "priPhyloP": 160,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_02.tsv.gz": {
+      "sha256": "f2a59e8d666eeebc5e36144d97607276252e5dde0533788e27792b0ac68ec656",
+      "rows": 79998,
+      "unique_variants": 79998,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 79998,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 187,
+        "priPhyloP": 160,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_03.tsv.gz": {
+      "sha256": "084d146726ad6ea23cedf3338a03c9a276811a152c4e95c642fc9cd8d4b7f1a8",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1054,
+        "priPhyloP": 948,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_04.tsv.gz": {
+      "sha256": "b78e0d8739bbb2e3dbe6241feeb00c43fa546eb5037648aea3df6dd177a99cd9",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1637,
+        "priPhyloP": 1502,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_05.tsv.gz": {
+      "sha256": "edbdb55a611dffa7172ee8df8bf2c71ca52576e645efe0fc1f81bfc6aa496d29",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1386,
+        "priPhyloP": 1263,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_06.tsv.gz": {
+      "sha256": "8c354cc9c1add74dded3b32232bafec0300f98961824d9e6e3f0cce391c93787",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 949,
+        "priPhyloP": 836,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_07.tsv.gz": {
+      "sha256": "67a9eacb6c4cf66ece46f75cf0a7238635eecf41e6ed7ee65378ca044fb58d50",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1354,
+        "priPhyloP": 1178,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_08.tsv.gz": {
+      "sha256": "eb9c2a118059c59a930c2312bed317dc8cc7de9fd817fd9084198f169ad1dc3d",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1135,
+        "priPhyloP": 1011,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_09.tsv.gz": {
+      "sha256": "3cea91d698baab2165a6286780c389df636cf5a20490d2b047a3815b9f12f2a9",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 948,
+        "priPhyloP": 844,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_10.tsv.gz": {
+      "sha256": "ed62c801be9402bc92e67d589a8b48a8a01b326cc5c10c3106417c94fa4ba7ce",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1264,
+        "priPhyloP": 1139,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_11.tsv.gz": {
+      "sha256": "f54455ee9fe192f2c08ccdaa9207adf4980885027287a1d0add9f91ab60fa5fc",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1286,
+        "priPhyloP": 1179,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_12.tsv.gz": {
+      "sha256": "eab2452a2c646e936ee1f9cad97541b96341d07946f07ee64677c1bde6c11bd0",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1647,
+        "priPhyloP": 1513,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_13.tsv.gz": {
+      "sha256": "523f36817536e583a373bec01b01522f19621ff25603b18e6ef72f7b31e86532",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1106,
+        "priPhyloP": 1006,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_14.tsv.gz": {
+      "sha256": "e0af008e8b23e23ba41ed216cafc50c8c82e49693611beb75265ce9f04d5facb",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 2467,
+        "priPhyloP": 2295,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_15.tsv.gz": {
+      "sha256": "39e5627f8bb34387913d728f53da7426ab0dbf1bd1af4dccdc9a5d65913c2bcb",
+      "rows": 79999,
+      "unique_variants": 79999,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 79999,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 878,
+        "priPhyloP": 794,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_16.tsv.gz": {
+      "sha256": "e0aa1eaee94414cdbb95afcb8fad3c388a521d5b7078ca123b2c8ce892625738",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1660,
+        "priPhyloP": 1516,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_17.tsv.gz": {
+      "sha256": "d6b5a4c5381beeddc8bda89c137616136b6def561d968ebc9a7027d118668fca",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1377,
+        "priPhyloP": 1257,
+        "GerpN": 3,
+        "GerpS": 3
+      }
+    },
+    "cadd_inclAnno_batch_18.tsv.gz": {
+      "sha256": "c84522903262940fbe4865d56679e5d8eda00ca8ae0bd730d35ce13ab65010c9",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 944,
+        "priPhyloP": 790,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_19.tsv.gz": {
+      "sha256": "68adcd7c54df69d307901b4085fa0bc122194d6c2e301f9873099562597cf178",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1489,
+        "priPhyloP": 1333,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_20.tsv.gz": {
+      "sha256": "e43946821f7140111965f85a1fab2fc1d00e2e48c02b09832ea577cef508c438",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 895,
+        "priPhyloP": 775,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_21.tsv.gz": {
+      "sha256": "e028a8aad0a1e43465bb941da7180fbf5ba60b5ecee3470c95dd2f91ec42d398",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1258,
+        "priPhyloP": 1145,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_22.tsv.gz": {
+      "sha256": "68ef91a6a93b46cf785d51ca6ce0a1edf4ab6e223102f07524051428c2ae466d",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1439,
+        "priPhyloP": 1318,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_23.tsv.gz": {
+      "sha256": "b33aafe04c78ade483866a0f587874c4af4d404314396a1d9bff7d7dfdc73c40",
+      "rows": 80000,
+      "unique_variants": 80000,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 80000,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 1391,
+        "priPhyloP": 1236,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    },
+    "cadd_inclAnno_batch_24.tsv.gz": {
+      "sha256": "49582fe95f48e32b596ce8f3fb5848bfdb6a8d50ada8614c23e2b2520fed17fb",
+      "rows": 95580,
+      "unique_variants": 95580,
+      "within_batch_duplicate_rows": 0,
+      "required_columns_present": true,
+      "rows_matching_submitted_vcf": 95580,
+      "unmatched_variants": 0,
+      "missing_values": {
+        "priPhCons": 2719,
+        "priPhyloP": 2544,
+        "GerpN": 0,
+        "GerpS": 0
+      }
+    }
+  },
+  "pairwise_overlaps": {
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_02.tsv.gz": {
+      "shared_variants": 79997,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 1,
+      "unique_to_right": 1
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_03.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_04.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_05.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_06.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_07.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_08.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_09.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_10.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_11.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_12.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_13.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_14.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_01.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_03.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_04.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_05.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_06.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_07.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_08.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_09.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_10.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_11.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_12.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_13.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_14.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_02.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79998,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_04.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_05.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_06.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_07.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_08.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_09.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_10.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_11.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_12.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_13.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_14.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_03.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_05.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_06.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_07.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_08.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_09.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_10.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_11.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_12.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_13.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_14.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_04.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_06.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_07.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_08.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_09.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_10.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_11.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_12.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_13.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_14.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_05.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_07.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_08.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_09.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_10.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_11.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_12.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_13.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_14.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_06.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_08.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_09.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_10.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_11.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_12.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_13.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_14.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_07.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_09.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_10.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_11.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_12.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_13.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_14.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_08.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_10.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_11.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_12.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_13.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_14.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_09.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_11.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_12.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_13.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_14.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_10.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_11.tsv.gz vs cadd_inclAnno_batch_12.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_11.tsv.gz vs cadd_inclAnno_batch_13.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_11.tsv.gz vs cadd_inclAnno_batch_14.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_11.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_11.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_11.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_11.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_11.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_11.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_11.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_11.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_11.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_11.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_12.tsv.gz vs cadd_inclAnno_batch_13.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_12.tsv.gz vs cadd_inclAnno_batch_14.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_12.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_12.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_12.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_12.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_12.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_12.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_12.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_12.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_12.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_12.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_13.tsv.gz vs cadd_inclAnno_batch_14.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_13.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_13.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_13.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_13.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_13.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_13.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_13.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_13.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_13.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_13.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_14.tsv.gz vs cadd_inclAnno_batch_15.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 79999
+    },
+    "cadd_inclAnno_batch_14.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_14.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_14.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_14.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_14.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_14.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_14.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_14.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_14.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_15.tsv.gz vs cadd_inclAnno_batch_16.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79999,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_15.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79999,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_15.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79999,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_15.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79999,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_15.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79999,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_15.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79999,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_15.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79999,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_15.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79999,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_15.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 79999,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_16.tsv.gz vs cadd_inclAnno_batch_17.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_16.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_16.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_16.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_16.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_16.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_16.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_16.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_17.tsv.gz vs cadd_inclAnno_batch_18.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_17.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_17.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_17.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_17.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_17.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_17.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_18.tsv.gz vs cadd_inclAnno_batch_19.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_18.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_18.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_18.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_18.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_18.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_19.tsv.gz vs cadd_inclAnno_batch_20.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_19.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_19.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_19.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_19.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_20.tsv.gz vs cadd_inclAnno_batch_21.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_20.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_20.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_20.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_21.tsv.gz vs cadd_inclAnno_batch_22.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_21.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_21.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_22.tsv.gz vs cadd_inclAnno_batch_23.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 80000
+    },
+    "cadd_inclAnno_batch_22.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    },
+    "cadd_inclAnno_batch_23.tsv.gz vs cadd_inclAnno_batch_24.tsv.gz": {
+      "shared_variants": 0,
+      "different_required_score_tuples": 0,
+      "unique_to_left": 80000,
+      "unique_to_right": 95580
+    }
+  },
+  "raw_rows_across_downloads": 1935575,
+  "unique_variants_across_downloads": 1855578,
+  "duplicate_rows_across_batches": 79997,
+  "cross_batch_score_conflicts": 0,
+  "conclusion": "All downloaded annotations are keyed and deduplicated by chromosome, position, REF, and ALT; see per-file and pairwise audits."
+}
