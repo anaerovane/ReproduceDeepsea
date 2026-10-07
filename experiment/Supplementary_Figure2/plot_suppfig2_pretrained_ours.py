@@ -7,23 +7,27 @@ import numpy as np
 import torch
 import matplotlib.pyplot as plt
 from sklearn.metrics import roc_auc_score
+from huggingface_hub import hf_hub_download
 
 HERE = Path(__file__).resolve().parent
 FUXIAN = Path(os.environ.get("DEEPSEA_FUXIAN_ROOT", str(HERE.parents[1]))).resolve()
 OUT = HERE / "suppfig2_tf_fulltrain"
 sys.path.insert(0, str(HERE))
+sys.path.insert(0, str(FUXIAN))
 from deepsea_models import load_pretrained_model, load_our_model
+from model_assets import resolve_ours_checkpoint, resolve_pretrained_predict_checkpoint
 
 TRAINED_FEATURES = OUT / "gkm_auc_results_completed.csv"
 TEST_X = OUT / "test_forward_agct_1000x4.bin"
 TEST_Y = OUT / "test_forward_labels_rowmajor.bin"
-TEST_INDEX_BUNDLE = OUT / "test_indices.npz"
+HF_REPO = os.environ.get("DEEPSEA_HF_REPO", "aer0vane/reproduce_deepsea")
+HF_RESULTS = "experiment/Supplementary_Figure2/results"
 N_TEST, WIDTH, N_FEATURES = 227_512, 1000, 919
 BATCH = 256
 BASES = np.array(list("AGCT"))
 CHECKPOINTS = {
-    "pretrained": FUXIAN / "models" / "deepsea_predict.pth",
-    "ours": FUXIAN / "training_checkpoints" / "best_model_FINAL_EPOCH53.pth",
+    "pretrained": resolve_pretrained_predict_checkpoint(FUXIAN),
+    "ours": resolve_ours_checkpoint(FUXIAN),
 }
 
 
@@ -34,10 +38,26 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 
+def resolve_hf_result(filename: str) -> Path:
+    """Use the project cache when available, otherwise fetch the verified Hub artifact."""
+    return Path(hf_hub_download(
+        repo_id=HF_REPO,
+        filename=f"{HF_RESULTS}/{filename}",
+        repo_type="model",
+    ))
+
+
 def load_test_index_map(features: list[int]) -> dict[int, np.ndarray]:
     """Load the compact, flat bundle; fall back to an in-progress run layout."""
-    if TEST_INDEX_BUNDLE.exists():
-        with np.load(TEST_INDEX_BUNDLE) as bundle:
+    if (OUT / "test_indices.npz").exists():
+        index_bundle = OUT / "test_indices.npz"
+    else:
+        try:
+            index_bundle = resolve_hf_result("test_indices.npz")
+        except Exception:
+            index_bundle = None
+    if index_bundle is not None:
+        with np.load(index_bundle) as bundle:
             return {i: bundle[f"feature_{i}"].astype(np.int32) for i in features}
 
     # The training scripts write this temporary layout before packaging a run.
@@ -63,10 +83,21 @@ def load_results():
 
 def infer(model_name, features, union, xmap, device):
     cache=OUT/("pretrained_same_test_predictions_agct.npy" if model_name=='pretrained' else "ours_same_test_predictions.npy")
+    cache_for_read=cache
     index_cache=OUT/'deepsea_inference_test_indices.npy'
-    if cache.exists() and index_cache.exists():
+    if not index_cache.exists():
+        try:
+            index_cache=resolve_hf_result(index_cache.name)
+        except Exception:
+            pass
+    if not cache.exists():
+        try:
+            cache_for_read=resolve_hf_result(cache.name)
+        except Exception:
+            pass
+    if cache_for_read.exists() and index_cache.exists():
         old_idx=np.load(index_cache,mmap_mode='r')
-        p=np.load(cache,mmap_mode='r')
+        p=np.load(cache_for_read,mmap_mode='r')
         if np.array_equal(old_idx,union) and p.shape==(len(union),len(features)):
             print(f'{model_name}: reusing verified prediction cache {p.shape}',flush=True)
             return p
