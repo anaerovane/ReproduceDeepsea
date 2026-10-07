@@ -34,6 +34,8 @@ python plot_suppfig2_pretrained_ours.py
 python package_suppfig2_artifacts.py
 ```
 
+Before packaging, authenticate with `hf auth login`; the package script updates the archive on Hugging Face and removes the local archive after verification.
+
 The included gkm-SVM executables are Linux x86-64. For another platform, build from the included source archive or use the upstream source linked in `LOCAL_MODEL_FIGURES.md`.
 
 ## Evaluation notes
