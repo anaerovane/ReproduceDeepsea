@@ -9,4 +9,4 @@ Compares pretrained and epoch-53 DeepSEA across centered 200, 500, and 1,000 bp 
 - `experiment2_auc_data.npz`: compact per-predictor results used by the plot script.
 - `experiment2_overall_auc_pretrained.png` and `experiment2_overall_auc_ours.png`: final separate panels.
 
-Code, the small result NPZ, and final figures are kept together in this experiment folder and published in the matching [GitHub experiment directory](https://github.com/anaerovane/ReproduceDeepsea/tree/main/experiment/Experiment2_Context_Length_Ablation). These compact files do not need a separate Hugging Face copy.
+Code, the small result NPZ, and final figures are kept together in this experiment folder and published in the matching [GitHub experiment directory](https://github.com/anaerovane/ReproduceDeepsea/tree/main/experiment/Experiment2_Context_Length_Ablation). These compact files stay on GitHub; the matching [Hugging Face experiment folder](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Experiment2_Context_Length_Ablation) is a navigation pointer only.
