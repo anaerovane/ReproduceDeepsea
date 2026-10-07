@@ -38,17 +38,25 @@ plt.rcParams.update({
 })
 
 WORK = os.path.dirname(os.path.abspath(__file__))
-OUT  = f'{WORK}'
+OUT  = os.path.join(WORK, 'experiment', 'Figure2')
 HF_REPO_ID = 'aer0vane/reproduce_deepsea'
 
 
 def input_path(filename):
-    """Use a local inference output when present, otherwise read the HF copy."""
-    local_path = os.path.join(WORK, filename)
+    """Resolve shared metadata, source inputs, or generated Figure 2 caches."""
+    if filename == 'predictor_names.txt':
+        local_path = os.path.join(WORK, filename)
+        hub_path = filename
+    elif filename == '41592_2015_BFnmeth3547_MOESM647_ESM.csv':
+        local_path = os.path.join(WORK, 'experiment', 'Figure2', 'inputs', filename)
+        hub_path = f'experiment/Figure2/inputs/{filename}'
+    else:
+        local_path = os.path.join(WORK, 'experiment', 'Figure2', 'outputs', filename)
+        hub_path = f'experiment/Figure2/outputs/{filename}'
     if os.path.isfile(local_path):
         return local_path
     print(f"  Fetching {filename} from Hugging Face cache...")
-    return hf_hub_download(repo_id=HF_REPO_ID, filename=filename, repo_type='model')
+    return hf_hub_download(repo_id=HF_REPO_ID, filename=hub_path, repo_type='model')
 
 # =============================================================================
 # 解析参数
@@ -58,6 +66,7 @@ if model_name not in ('pretrained', 'ours'):
     print(f"Usage: python3 {sys.argv[0]} [pretrained|ours]")
     sys.exit(1)
 
+os.makedirs(OUT, exist_ok=True)
 print(f"=== Generating Figure 2 for: {model_name} ===")
 
 # =============================================================================
