@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Run pretrained and retrained DeepSEA inference and collect Figure 2 arrays.
 
 This orchestration script calls the project's two existing inference runners.

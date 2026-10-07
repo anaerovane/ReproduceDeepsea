@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 用真实复现数据画图：
   Figure 2a: ROC (test_labels + test_predictions)

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Materialize the large byte caches used by the gkm-SVM and Lua workflows.
 
 The upstream bundle supplies compact MAT data. This script converts train.mat

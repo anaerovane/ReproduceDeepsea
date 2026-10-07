@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Run allele-specific DeepSEA predictions and draw Supplementary Figure 4.
 
 Input is the CHT result table produced from the McVicker GSE47991 read-count

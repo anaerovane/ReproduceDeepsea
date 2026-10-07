@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Real ref/alt inference; Figure 3 chromatin-only replication on supplied SNP sets.
 
 No HGMD substitution, conservation features, or copied baseline scores.

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Download DeepSEA checkpoints published in the Hugging Face repository."""
 
 import argparse

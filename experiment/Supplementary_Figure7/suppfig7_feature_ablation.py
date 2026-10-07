@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Recompute Supplementary Figure 7 feature ablations on available cohorts.
 
 Creates separate pretrained and ours figures for GRASP eQTL and GWAS only.

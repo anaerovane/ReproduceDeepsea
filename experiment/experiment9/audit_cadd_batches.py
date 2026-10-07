@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Audit downloaded CADD annotations against submitted variants and each other."""
 import csv
 import gzip

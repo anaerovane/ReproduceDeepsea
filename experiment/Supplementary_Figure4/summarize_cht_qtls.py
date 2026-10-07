@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Merge CHT outputs and apply within-mark Benjamini-Hochberg FDR."""
 from pathlib import Path
 import sys

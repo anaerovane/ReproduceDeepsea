@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Draw separate Experiment 9 Supplementary Figure 6 panels for each model."""
 from pathlib import Path
 import json

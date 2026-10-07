@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Fit the unchanged WASP AS-dispersion likelihood per donor in parallel."""
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path

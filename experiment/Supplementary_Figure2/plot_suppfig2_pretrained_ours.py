@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Infer local DeepSEA checkpoints on the gkm held-out rows and draw separate panels."""
 from __future__ import annotations
 import csv, hashlib, json, os, sys

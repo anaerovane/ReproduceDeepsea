@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """DeepSEA architectures and checkpoint loaders used by the Figure 3 rerun."""
 
 from pathlib import Path

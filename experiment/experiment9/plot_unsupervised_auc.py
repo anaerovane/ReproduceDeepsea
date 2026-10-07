@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Plot AUCs for each experiment 9 score across negative cohorts."""
 from pathlib import Path
 import pandas as pd

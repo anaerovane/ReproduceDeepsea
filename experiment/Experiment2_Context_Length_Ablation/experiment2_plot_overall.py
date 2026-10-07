@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 实验 #2: 画Overall AUC箱线图 — 两张图，pretrained一张，ours一张
 """

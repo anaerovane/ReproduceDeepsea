@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Poll and collect finished CADD GRCh37-v1.4 inclAnno batches."""
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed

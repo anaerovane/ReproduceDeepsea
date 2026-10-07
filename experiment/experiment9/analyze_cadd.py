@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Score all returned CADD annotations with empirical DeepSEA E-values.
 
 Uses the existing pretrained and ours effect matrices from Figure3 and

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Plot configured Experiment 6 effects from the saved inference cache."""
 import json
 from pathlib import Path

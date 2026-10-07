@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Run the configured pretrained and ours checkpoints on Experiment 6 inputs."""
 import json
 from pathlib import Path

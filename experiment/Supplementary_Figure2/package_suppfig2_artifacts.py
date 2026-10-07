@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Merge per-feature outputs, publish the archive to HF, and leave no local copy."""
 from __future__ import annotations
 

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Retry only incomplete Supplementary Fig. 2 TF features.
 
 Features with fewer than 2,000 clean training examples use the maximum

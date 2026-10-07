@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Query the official hg19 FunSeq2 2.1.0 whole-genome track for cohort loci."""
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed

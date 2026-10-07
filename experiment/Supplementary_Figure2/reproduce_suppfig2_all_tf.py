@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Reproduce the gkm-SVM TF comparison for DeepSEA Supplementary Fig. 2.
 
 Uses the true predictor order, full train split for sampling, both 1000bp and

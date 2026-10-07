@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Download the public GEO count tracks and UCSC hg18→hg19 chain on demand."""
 from __future__ import annotations
 

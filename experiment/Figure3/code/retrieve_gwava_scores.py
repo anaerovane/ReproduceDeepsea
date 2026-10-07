@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Retrieve indexed GRCh37 GWAVA scores for Figure3 cohort loci."""
 import argparse
 import gzip

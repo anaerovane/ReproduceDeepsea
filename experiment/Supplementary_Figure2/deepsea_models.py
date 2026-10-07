@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """DeepSEA architecture and checkpoint loaders for local TF comparisons."""
 
 from pathlib import Path

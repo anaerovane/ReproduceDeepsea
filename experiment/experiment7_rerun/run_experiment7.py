@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Re-run experiment 7 ref/alt predictions from local FASTA and checkpoints."""
 from __future__ import annotations
 

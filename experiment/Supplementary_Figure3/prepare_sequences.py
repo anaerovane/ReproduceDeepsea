@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Extract and validate the four 1 kb GRCh37 reference windows for Experiment 6."""
 import json
 from pathlib import Path
