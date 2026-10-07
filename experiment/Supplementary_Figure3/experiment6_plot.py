@@ -8,10 +8,13 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
+from huggingface_hub import hf_hub_download
 
 
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parents[1]
+RESULTS = HERE / "results"
+HF_REPO_ID = "aer0vane/reproduce_deepsea"
 CONFIG = json.loads((HERE / "experiment6_config.json").read_text())
 BASES = CONFIG["base_order"]
 CMAP = LinearSegmentedColormap.from_list(
@@ -49,7 +52,14 @@ def effect_matrix(values, sequence, feature_index):
 def main():
     names_path = PROJECT / CONFIG["predictor_names"]
     predictor_names = names_path.read_text().splitlines()
-    with np.load(HERE / "experiment6_all_data.npz", allow_pickle=False) as data:
+    effects_path = RESULTS / "experiment6_all_data.npz"
+    if not effects_path.is_file():
+        effects_path = Path(hf_hub_download(
+            repo_id=HF_REPO_ID,
+            filename="experiment/Supplementary_Figure3/results/experiment6_all_data.npz",
+            repo_type="model",
+        ))
+    with np.load(effects_path, allow_pickle=False) as data:
         panels = []
         metadata = {
             "mutation_order": CONFIG["mutation_order"],
@@ -150,7 +160,8 @@ def main():
                 print(f"Saved: {output}", flush=True)
             plt.close(figure)
 
-    (HERE / "experiment6_plot_metadata.json").write_text(
+    RESULTS.mkdir(parents=True, exist_ok=True)
+    (RESULTS / "experiment6_plot_metadata.json").write_text(
         json.dumps(metadata, indent=2) + "\n"
     )
 
