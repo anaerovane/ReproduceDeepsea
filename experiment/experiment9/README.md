@@ -14,7 +14,7 @@ The completed analysis uses GRASP eQTL and GWAS Catalog cohorts. HGMD is unavail
 - **GitHub (code and documentation):** [ReproduceDeepsea/experiment/experiment9](https://github.com/anaerovane/ReproduceDeepsea/tree/main/experiment/experiment9)
 - **Hugging Face (generated input and complete results):** [experiment/experiment9](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/experiment9)
 
-The large `inputs/` and `outputs/` files are stored on Hugging Face; they are not duplicated in the GitHub repository. To restore them locally, use `hf download aer0vane/reproduce_deepsea --repo-type model --include 'experiment/experiment9/inputs/**' 'experiment/experiment9/outputs/**' --local-dir .` from the repository root.
+The large `inputs/` and `outputs/` files are stored on Hugging Face; they are not duplicated in the GitHub repository. To restore them locally, use `hf download aer0vane/reproduce_deepsea --repo-type model --include 'experiment/experiment9/**' --local-dir .` from the repository root.
 
 ## Reproduction boundary
 
