@@ -45,7 +45,7 @@ HGMD Professional 2014.4 原始 2,977 个 regulatory SNV 坐标不可得，主�
 
 目录一眼看懂：`code/` 放脚本，`figures/` 放最终图片，`outputs/` 放输入缓存、逐样本预测、模型折缓存和核验结果；本目录根部只放说明文档。 大型结果上传至 Hugging Face；清理后的本地 `outputs/` 只保留下载指引。需要恢复时运行 `hf download aer0vane/reproduce_deepsea --include "experiment/Figure3/outputs/**" --local-dir <fuxian3项目根目录>`。
 
-复跑需要 fuxian3 根目录下的论文补充表 5/6（`newdata/`）和 hg19 染色体 FASTA（`reference_genome/`）；下载位置与上游链接见 [项目下载指南](../../DOWNLOAD.md)。大型缓存和基线分数可从上面的 Hugging Face 地址恢复。
+复跑需要 fuxian3 根目录下的论文补充表 5/6（`newdata/`）和 hg19 染色体 FASTA（`reference_genome/`）；下载位置与上游链接见 [project download guide](https://github.com/anaerovane/ReproduceDeepsea/blob/main/DOWNLOAD.md)。大型缓存和基线分数可从上面的 Hugging Face 地址恢复。
 
 在 `Figure3/` 根目录执行主复跑（依赖 numpy/pandas/torch/sklearn/xgboost/matplotlib）：
 
