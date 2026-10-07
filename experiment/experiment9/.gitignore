@@ -1,0 +1,4 @@
+inputs/*
+outputs/*
+!inputs/.gitkeep
+!outputs/.gitkeep
