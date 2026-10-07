@@ -1,4 +1,4 @@
-# Supple3 核查与运行说明
+# Supplementary Figure 3 核查与运行说明
 
 本次使用本地两个权重重新完成四个位点、每个位点 3000 个单碱基突变的推理。位点、等位基因、特征索引、权重路径和序列设置集中在 `experiment6_config.json`；绘图在使用每个特征前，会核对 `predictor_names.txt` 中对应的精确名称。
 `prepare_sequences.py` 从本地 GRCh37/hg19 FASTA 生成四条 1000bp 输入，并核对参考碱基及歧义字符。新生成的四个 one-hot 数组与最终推理使用的旧输入逐元素完全一致，中心参考碱基为 G/T/A/C。
@@ -15,10 +15,10 @@
 运行（在项目根目录；先准备序列）：
 
 ```bash
-python deepsea/fuxian3/experiment/Supple3/prepare_sequences.py
-python deepsea/fuxian3/experiment/Supple3/experiment6_saturation_full.py
+python experiment/Supplementary_Figure3/prepare_sequences.py
+python experiment/Supplementary_Figure3/experiment6_saturation_full.py
 # 仅从最终效应缓存重绘
-python deepsea/fuxian3/experiment/Supple3/experiment6_plot.py
+python experiment/Supplementary_Figure3/experiment6_plot.py
 ```
 
 数据：experiment6_all_data.npz 保存效应；experiment6_raw_predictions.npz 保存原始和突变预测；两张图各输出 PNG 和 PDF。

@@ -1,9 +1,11 @@
 # ReproduceDeepsea
 
-DeepSEA reproduction project. Experiment-specific scripts and final figures are organized under `experiment/`.
+DeepSEA reproduction project.
 
-## Experiments
+## Supplementary Figure 3
 
-- [Experiment 6: saturation mutagenesis](experiment/supple3/README.md) — inference and plotting for pretrained and locally trained DeepSEA checkpoints.
+[Supplementary Figure 3: *In silico* saturated mutagenesis analysis for identifying predictive sequence features](experiment/Supplementary_Figure3/README.md)
 
-Model checkpoints and the 919-output feature-name table are hosted in the Hugging Face repository [aer0vane/reproduce_deepsea](https://huggingface.co/aer0vane/reproduce_deepsea). Large raw prediction caches are not tracked here.
+- [Hugging Face files and model checkpoints](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Supplementary_Figure3)
+- [Original paper](https://www-nature-com.libproxy1.nus.edu.sg/articles/nmeth.3547)
+- [Original Supplementary Figure 3 image](https://media-springernature-com.libproxy1.nus.edu.sg/full/springer-static/image/art%3A10.1038%2Fnmeth.3547/MediaObjects/41592_2015_Article_BFnmeth3547_Fig6_ESM.jpg)
