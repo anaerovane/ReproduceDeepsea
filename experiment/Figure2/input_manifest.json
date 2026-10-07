@@ -1,0 +1,83 @@
+{
+  "figure": "DeepSEA Figure 2",
+  "code": [
+    {
+      "file": "inference.py",
+      "bytes": 3597,
+      "sha256": "82e4f9c03507deba3727a0c25f5e3c3f2010a7f6f165a3d452e6c6c48464684e"
+    },
+    {
+      "file": "plot.py",
+      "bytes": 10129,
+      "sha256": "10632020b870dcc694c39bd18ae1efe994c48fc4ecd86ea3acd2a0f10f2b1c70"
+    }
+  ],
+  "inputs": {
+    "41592_2015_BFnmeth3547_MOESM647_ESM.csv": {
+      "bytes": 4859459,
+      "sha256": "7fe6307ad12e6b0f39465398d114e54625c67c1fd378d5874920dae790bbad7a",
+      "source": "Hugging Face aer0vane/reproduce_deepsea:experiment/Figure2/inputs/41592_2015_BFnmeth3547_MOESM647_ESM.csv",
+      "retained_locally": false
+    },
+    "predictor_names.txt": {
+      "bytes": 17320,
+      "sha256": "afe7412512ec9b5f5e75353490255624b8d45ec5b9c96be0a48fbb78a5ecd9a8",
+      "source": "Hugging Face aer0vane/reproduce_deepsea:predictor_names.txt",
+      "retained_locally": false
+    },
+    "test_labels.npy": {
+      "bytes": 418167184,
+      "sha256": "261a21e8e7b399d269c5f72a68105349ef211c9e6184d51d17e9e346de8a7887",
+      "source": "Hugging Face aer0vane/reproduce_deepsea:experiment/Figure2/outputs/test_labels.npy",
+      "retained_locally": false
+    },
+    "test_predictions_pretrained.npy": {
+      "bytes": 1672668352,
+      "sha256": "218f5aea2a815b08731d7126e67346c9750dce57d7ee053987174756b29679ff",
+      "source": "Hugging Face aer0vane/reproduce_deepsea:experiment/Figure2/outputs/test_predictions_pretrained.npy",
+      "retained_locally": false
+    },
+    "test_predictions_ours.npy": {
+      "bytes": 1672668352,
+      "sha256": "0ba070704efd30d517e799b70981cfcf137ce547fb9206e462a8efccf2d392f2",
+      "source": "Hugging Face aer0vane/reproduce_deepsea:experiment/Figure2/outputs/test_predictions_ours.npy",
+      "retained_locally": false
+    },
+    "dgf_ref_preds_pretrained.npy": {
+      "bytes": 114007592,
+      "sha256": "7f87788fea22ab6838a0810d42298778d466b3b474cfc5399e6e9d5fbdcfd10c",
+      "source": "Hugging Face aer0vane/reproduce_deepsea:experiment/Figure2/outputs/dgf_ref_preds_pretrained.npy",
+      "retained_locally": false
+    },
+    "dgf_alt_preds_pretrained.npy": {
+      "bytes": 114007592,
+      "sha256": "ed6218f37a7011bf699933a829f57a06109b459e872eac88577c8162af46b448",
+      "source": "Hugging Face aer0vane/reproduce_deepsea:experiment/Figure2/outputs/dgf_alt_preds_pretrained.npy",
+      "retained_locally": false
+    },
+    "dgf_ref_preds_ours.npy": {
+      "bytes": 114007592,
+      "sha256": "4fc2ea2d8ec5be2f99c62a24d4d020aeec139e2e65f510a537b0c5193f5a96b0",
+      "source": "Hugging Face aer0vane/reproduce_deepsea:experiment/Figure2/outputs/dgf_ref_preds_ours.npy",
+      "retained_locally": false
+    },
+    "dgf_alt_preds_ours.npy": {
+      "bytes": 114007592,
+      "sha256": "752fcfbab87480a08a082ad2f7d145b8c39b26c1bd2125e87c107fe3dbaf0dd0",
+      "source": "Hugging Face aer0vane/reproduce_deepsea:experiment/Figure2/outputs/dgf_alt_preds_ours.npy",
+      "retained_locally": false
+    }
+  },
+  "outputs": [
+    {
+      "file": "figure2_pretrained.png",
+      "bytes": 1099551,
+      "sha256": "887a0b8ac2e15e85806e77de41a7518fae1a4d3f29e87ea8f6437ce280805341"
+    },
+    {
+      "file": "figure2_ours.png",
+      "bytes": 1148954,
+      "sha256": "871f05286423bcfb59174dd8e483404ac582f033ddc891e792fc725933da8c17"
+    }
+  ]
+}
