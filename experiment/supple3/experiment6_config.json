@@ -1,0 +1,79 @@
+{
+  "sequence_length": 1000,
+  "center_index": 500,
+  "num_output_features": 919,
+  "zoom_interval": [400, 600],
+  "inference_batch_size": 256,
+  "odds_probability_clip_epsilon": 1e-7,
+  "base_order": "AGCT",
+  "sequence_source": {
+    "assembly": "GRCh37/hg19",
+    "fasta_dir": "reference_genome",
+    "coordinate_system": "1-based"
+  },
+  "predictor_names": "predictor_names.txt",
+  "variants": [
+    {
+      "chrom": "chr1",
+      "position": 109817590,
+      "ref": "G",
+      "alt": "T",
+      "tf": "CEBPB",
+      "cell": "HepG2",
+      "sequence": "sequences/snp_chr1_109817590.npy",
+      "feature_index": 297,
+      "feature_name": "HepG2_CEBPB_None"
+    },
+    {
+      "chrom": "chr16",
+      "position": 209709,
+      "ref": "T",
+      "alt": "C",
+      "tf": "GATA1",
+      "cell": "K562",
+      "sequence": "sequences/snp_chr16_209709.npy",
+      "feature_index": 622,
+      "feature_name": "K562_GATA-1_None"
+    },
+    {
+      "chrom": "chr10",
+      "position": 23508363,
+      "ref": "A",
+      "alt": "G",
+      "tf": "FOXA1",
+      "cell": "HepG2",
+      "sequence": "sequences/snp_chr10_23508363.npy",
+      "feature_index": 302,
+      "feature_name": "HepG2_FOXA1_None"
+    },
+    {
+      "chrom": "chr16",
+      "position": 52599188,
+      "ref": "C",
+      "alt": "T",
+      "tf": "FOXA2",
+      "cell": "HepG2",
+      "sequence": "sequences/snp_chr16_52599188.npy",
+      "feature_index": 304,
+      "feature_name": "HepG2_FOXA2_None"
+    }
+  ],
+  "models": [
+    {
+      "id": "pretrained",
+      "display_name": "Pretrain",
+      "checkpoint": "models/deepsea_predict.pth",
+      "input_channel_order": [0, 2, 1, 3],
+      "reverse_complement_averaging": "checkpoint_internal"
+    },
+    {
+      "id": "ours",
+      "display_name": "Ours",
+      "checkpoint": "training_checkpoints/best_model_FINAL_EPOCH53.pth",
+      "input_channel_order": [0, 1, 2, 3],
+      "reverse_complement_averaging": "inference_script"
+    }
+  ],
+  "effect": "log2(mutant odds / reference odds)",
+  "mutation_order": "position, alternate base in AGCT order"
+}

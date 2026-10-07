@@ -1,0 +1,42 @@
+{
+  "mutation_order": "position, alternate base in AGCT order",
+  "effect": "log2(mutant odds / reference odds)",
+  "panels": [
+    {
+      "tf": "CEBPB",
+      "cell": "HepG2",
+      "chrom": "chr1",
+      "position": 109817590,
+      "feature_index": 297,
+      "feature_name": "HepG2_CEBPB_None",
+      "color_limit": 6.696428298950195
+    },
+    {
+      "tf": "GATA1",
+      "cell": "K562",
+      "chrom": "chr16",
+      "position": 209709,
+      "feature_index": 622,
+      "feature_name": "K562_GATA-1_None",
+      "color_limit": 5.347886085510254
+    },
+    {
+      "tf": "FOXA1",
+      "cell": "HepG2",
+      "chrom": "chr10",
+      "position": 23508363,
+      "feature_index": 302,
+      "feature_name": "HepG2_FOXA1_None",
+      "color_limit": 3.950063705444336
+    },
+    {
+      "tf": "FOXA2",
+      "cell": "HepG2",
+      "chrom": "chr16",
+      "position": 52599188,
+      "feature_index": 304,
+      "feature_name": "HepG2_FOXA2_None",
+      "color_limit": 2.330117702484131
+    }
+  ]
+}
