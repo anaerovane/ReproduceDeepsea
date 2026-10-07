@@ -7,11 +7,11 @@ Reproduction code for the DeepSEA vs gkm-SVM transcription-factor comparison. Th
 
 ## Directory layout
 
-- This directory contains the training, retry, inference/plotting, and packaging scripts, gkm-SVM executables, and this guide.
+- This directory contains the training, retry, inference/plotting, and packaging scripts. The local checkout also has compiled gkm-SVM executables; GitHub does not mirror these binaries.
 - `suppfig2_tf_fulltrain/` is the only child directory. Its images, tables, model inference outputs, and notes are directly inside it.
 - Detailed per-feature models and training indices are on Hugging Face at `experiment/Supplementary_Figure2/feature_models_and_indices.tar.zst`. DeepSEA matched-test prediction caches and index metadata are under `experiment/Supplementary_Figure2/results/`; the plotting script fetches those caches on demand. The large remote copies are removed from the local experiment folder after checksum verification.
 - Upstream gkm-SVM source and superseded smoke/legacy run materials are retained in separate archives in that same child directory.
-- The archives preserve files and their original paths; they can be expanded when per-feature inspection or compilation is needed.
+- Obtain the upstream gkm-SVM source from the [Beer Lab download page](https://www.beerlab.org/gkmsvm/) and compile `gkmsvm_kernel`, `gkmsvm_train`, and `gkmsvm_classify` into this local experiment directory before retraining. The binaries and third-party source archive are not published in GitHub.
 
 ## Active scripts
 
