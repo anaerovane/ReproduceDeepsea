@@ -19,7 +19,7 @@ import numpy as np
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-import reproduce_suppfig2_all_tf as core  # noqa: E402
+import reproduce_suppfig2_all_tf as core
 
 OUT = core.OUT
 RETRY_OUT = OUT / "retry_incomplete"
@@ -58,7 +58,7 @@ def _clean_sample(feature: int, label: int, rng: np.random.Generator) -> list[in
 
 def _run_one(feature: int, predictor: str) -> dict:
     core.init_worker()
-    # Avoid nested oversubscription when several kernel jobs run concurrently.
+
     core.KERNEL_THREADS = KERNEL_THREADS
     seed = core.SEED + feature
     rng = np.random.default_rng(seed)

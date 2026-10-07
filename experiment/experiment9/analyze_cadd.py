@@ -90,9 +90,8 @@ def empirical_evalue(background, query):
     if len(bg) == 0 or not valid.any():
         return result
     bg.sort()
-    # Official definition is the proportion of background SNPs with a larger
-    # score. Add-one smoothing keeps empirical E-values positive for geometric
-    # means while preserving the ordering and avoiding a zero-valued score.
+
+
     n_at_or_below = np.searchsorted(bg, q[valid], side="right")
     result[valid] = (len(bg) - n_at_or_below + 1) / (len(bg) + 1)
     return result
@@ -117,8 +116,8 @@ def prepare_effect_magnitude(path, n_variants):
     effects = np.load(path, mmap_mode="r")
     if effects.shape != (n_variants, 2 * N_CHROMATIN):
         raise RuntimeError(f"Unexpected effect matrix shape for {path.name}: {effects.shape}")
-    # Keep the compact 919-channel magnitude matrix resident in memory. This
-    # follows the paper/help definition: |P_ref-P_alt| times |log-odds change|.
+
+
     magnitude = np.empty((n_variants, N_CHROMATIN), dtype=np.float32)
     for start in range(0, n_variants, 20_000):
         stop = min(start + 20_000, n_variants)
@@ -150,9 +149,8 @@ def score_cohort(frame, magnitude, model, cohort, cached_chrom=None):
         chrom_gm = np.exp(log_chrom / N_CHROMATIN)
 
     conservation_e = np.full((len(frame), len(CADD_COLUMNS)), np.nan, dtype=np.float64)
-    # Keep all four evolutionary scores in their reported direction, following
-    # DeepSEA's definition: an E-value counts background SNPs with a higher
-    # feature score.
+
+
     polarity = np.ones(len(CADD_COLUMNS), dtype=np.float64)
     cadd = frame[list(CADD_COLUMNS)].to_numpy(dtype=np.float64) * polarity
     is_random = frame.label.eq("Random negative SNP").to_numpy()

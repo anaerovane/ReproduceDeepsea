@@ -70,8 +70,8 @@ def sha256(path):
 
 
 def read_cohort(task):
-    # Experiment 9 output carries the raw CADD annotations joined by variant ID
-    # to the exact validated, spatial-fold cohort used by Experiment 8.
+
+
     frame = pd.read_csv(cohort_path(task), sep="\t")
     keep = ["chr", "pos", "ref", "alt", "label", "positive", "fold",
             "distance_bp", "variant_id", *CADD]
@@ -266,8 +266,8 @@ def main():
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
 
     all_rows = []
-    # Evolutionary-only results are independent of the DeepSEA checkpoint;
-    # train once per cohort and carry the same line into each separate figure.
+
+
     conservation_by_task = {}
     for task in ("eqtl", "gwas"):
         frame = read_cohort(task)

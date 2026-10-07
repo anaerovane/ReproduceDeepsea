@@ -37,8 +37,8 @@ def main():
     args.output.parent.mkdir(parents=True, exist_ok=True)
     total_rows = 0
     with gzip.open(args.output, 'wt') as out:
-        # GREEN-DB's three score columns preserve the official order:
-        # region, TSS, unmatched.
+
+
         out.write('chr\tpos\tGWAVA_Region\tGWAVA_TSS\tGWAVA_Unmatched\ttrack_rows\tambiguous\n')
         for chrom in CHROMS:
             points = loci.loc[loci.chr.eq(chrom), 'pos'].drop_duplicates().sort_values()
@@ -63,8 +63,8 @@ def main():
                 vals = tuple(float(x) for x in fields[4:7])
                 by_pos.setdefault(key, set()).add(vals)
             for (c, pos), vectors in by_pos.items():
-                # This BED has no allele column. Retain only positions whose
-                # duplicate dbSNP identifiers agree on all three scores.
+
+
                 ambiguous = len(vectors) > 1
                 vals = next(iter(vectors)) if not ambiguous else (float('nan'),)*3
                 out.write(f'{c}\t{pos}\t{vals[0]}\t{vals[1]}\t{vals[2]}\t{len(vectors)}\t{int(ambiguous)}\n')

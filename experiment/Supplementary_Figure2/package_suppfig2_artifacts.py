@@ -67,13 +67,13 @@ def main() -> None:
             extract += ["--strip-components=1"]
         subprocess.run(extract, check=True)
 
-        # Merge new run outputs over the archived files while keeping previous TFs.
+
         for source in pending:
             shutil.copytree(source, stage / source.name, dirs_exist_ok=True)
         names = sorted(p.name for p in stage.glob("feature_*") if p.is_dir())
         names += [name for name in PACKED_DIRS if (stage / name).is_dir()]
 
-        # Retry-specific test indices take precedence in the directly usable bundle.
+
         index_dir = stage / "test_indices"
         retry_dir = stage / "retry_incomplete" / "test_indices"
         arrays = {}
@@ -111,7 +111,7 @@ def main() -> None:
         if remote is None or remote.size != packed.stat().st_size or remote_hash != sha256:
             raise RuntimeError("Hugging Face archive verification failed; expanded folders retained")
 
-        # Remove extracted outputs only after the matching remote file is confirmed.
+
         for path in pending:
             if path.is_dir():
                 shutil.rmtree(path)

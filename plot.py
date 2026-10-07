@@ -58,9 +58,7 @@ def input_path(filename):
     print(f"  Fetching {filename} from Hugging Face cache...")
     return hf_hub_download(repo_id=HF_REPO_ID, filename=hub_path, repo_type='model')
 
-# =============================================================================
-# 解析参数
-# =============================================================================
+
 model_name = sys.argv[1] if len(sys.argv) > 1 else 'pretrained'
 if model_name not in ('pretrained', 'ours'):
     print(f"Usage: python3 {sys.argv[0]} [pretrained|ours]")
@@ -69,12 +67,10 @@ if model_name not in ('pretrained', 'ours'):
 os.makedirs(OUT, exist_ok=True)
 print(f"=== Generating Figure 2 for: {model_name} ===")
 
-# =============================================================================
-# 加载真实数据
-# =============================================================================
+
 print("Loading data...")
 
-# Figure 2a 数据
+
 labels = np.load(input_path('test_labels.npy'))
 pred_file = input_path(f'test_predictions_{model_name}.npy')
 preds = np.load(pred_file)
@@ -82,25 +78,25 @@ with open(input_path('predictor_names.txt')) as f:
     predictor_names = [l.strip() for l in f if l.strip()]
 print(f"  model={model_name}, test_labels={labels.shape}, test_preds={preds.shape}")
 
-# Figure 2b/1c 真实数据 (DGF)
+
 dgf_ref_path = input_path(f'dgf_ref_preds_{model_name}.npy')
 dgf_alt_path = input_path(f'dgf_alt_preds_{model_name}.npy')
 dgf_ref = np.load(dgf_ref_path)
 dgf_alt = np.load(dgf_alt_path)
 print(f"  dgf_ref={dgf_ref.shape}, dgf_alt={dgf_alt.shape}")
 
-# Load experimental data (per-cell-type) as true labels
+
 dgf_csv = pd.read_csv(input_path('41592_2015_BFnmeth3547_MOESM647_ESM.csv'), skiprows=1)
-# Build variant-to-index mapping (same order as prediction files)
+
 variants = dgf_csv[['CHR', 'POS', 'REF', 'ALT']].drop_duplicates().reset_index(drop=True)
 variant_to_idx = {}
 for i, row in variants.iterrows():
     key = (row['CHR'], row['POS'], row['REF'], row['ALT'])
     variant_to_idx[key] = i
-# True direction per CSV row (per cell type): alt reads > ref reads
+
 dgf_csv['true_alt_biased'] = dgf_csv['Alt reads'] > dgf_csv['Ref reads']
-# Map to per-variant level — must use SAME order as predictions (drop_duplicates order)
-# NOTE: groupby sorts by key, so we cannot use groupby().mean().values directly!
+
+
 grouped_mean = dgf_csv.groupby(['CHR', 'POS', 'REF', 'ALT'])['true_alt_biased'].mean()
 true_dir_experimental = np.array([grouped_mean[(r['CHR'], r['POS'], r['REF'], r['ALT'])] > 0.5 for _, r in variants.iterrows()])
 print(f"  Experimental labels: alt-biased={true_dir_experimental.sum()}, ref-biased={(~true_dir_experimental).sum()}")
@@ -114,9 +110,6 @@ def classify(name):
     return 'TF binding'
 
 
-# =============================================================================
-# Figure 2 — ROC + 散点图 + Accuracy vs Margin
-# =============================================================================
 print("\n=== Figure 2 ===")
 
 fig = plt.figure(figsize=(13, 6.5))
@@ -124,7 +117,7 @@ fig.subplots_adjust(hspace=0.4, wspace=0.35, top=0.92, bottom=0.08, left=0.08, r
 
 gs = gridspec.GridSpec(2, 3, figure=fig, width_ratios=[1,1,1], height_ratios=[1,1])
 
-# ---- 1a: 三个并排 ROC 子图 ----
+
 axes_a = [fig.add_subplot(gs[0, 0]), fig.add_subplot(gs[0, 1]), fig.add_subplot(gs[0, 2])]
 
 cats_a = [
@@ -133,7 +126,7 @@ cats_a = [
     ('Histone marks', 'Histone marks'),
 ]
 
-# Color per model
+
 model_color = '#2166AC' if model_name == 'pretrained' else '#D73027'
 model_label = 'Pretrained' if model_name == 'pretrained' else 'Ours (epoch 53)'
 
@@ -148,7 +141,7 @@ for ax, (cat, title) in zip(axes_a, cats_a):
             aucs.append(auc(fpr, tpr))
             ax.plot(fpr, tpr, color=model_color, alpha=0.15, lw=0.4)
 
-    # Mean AUC annotation
+
     if aucs:
         mean_auc = np.mean(aucs)
         ax.text(0.6, 0.15, f'{model_label}\nmean AUC={mean_auc:.3f}',
@@ -165,7 +158,7 @@ for ax, (cat, title) in zip(axes_a, cats_a):
 
 axes_a[0].text(-0.22, 1.18, 'a', fontsize=13, fontweight='bold', transform=axes_a[0].transAxes)
 
-# ---- 1b: 散点图 (真实数据: dgf_ref_preds, dgf_alt_preds) ----
+
 ax_b = fig.add_subplot(gs[1, 0:2])
 
 dnase_idx = [i for i, n in enumerate(predictor_names) if 'DNase' in n]
@@ -214,10 +207,10 @@ ax_b.legend(loc='upper left', fontsize=6, markerscale=2, framealpha=0.9)
 ax_b.tick_params(direction='out', length=2)
 ax_b.text(-0.10, 1.12, 'b', fontsize=13, fontweight='bold', transform=ax_b.transAxes)
 
-# ---- 1c: Accuracy vs Margin (真实数据) ----
+
 ax_c = fig.add_subplot(gs[1, 2])
 
-# Color per model
+
 c_color = '#2166AC' if model_name == 'pretrained' else '#D73027'
 c_label = 'Pretrained' if model_name == 'pretrained' else 'Ours (epoch 53)'
 
@@ -265,7 +258,7 @@ valid = ~np.isnan(mean_accs)
 ax_c.plot(margins[valid], mean_accs[valid], '-', color=c_color, lw=2.0,
           label=f'{c_label} mean acc')
 
-# Annotate final accuracy at max margin
+
 if valid.sum() > 0:
     final_acc = mean_accs[valid][-1]
     ax_c.text(0.35, 0.55 if model_name == 'pretrained' else 0.45,

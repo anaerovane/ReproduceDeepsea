@@ -27,19 +27,14 @@ WORK = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, WORK)
 from model_assets import resolve_ours_checkpoint, resolve_pretrained_predict_checkpoint
 
-# ==============================================================================
-# 配置
-# ==============================================================================
+
 TEST_DATA_PATH = f'{WORK}/deepsea_train/test.mat'
 PREDICT_MODEL_PATH = str(resolve_pretrained_predict_checkpoint(WORK))
 OUR_MODEL_PATH = str(resolve_ours_checkpoint(WORK))
 CONTEXT_LENGTHS = [200, 500, 1000]
 FULL_LENGTH = 1000
 
-# ==============================================================================
-# 模型定义
-# ==============================================================================
-# --- Our model ---
+
 class DeepSEA_Ours(nn.Module):
     def __init__(self):
         super().__init__()
@@ -56,7 +51,7 @@ class DeepSEA_Ours(nn.Module):
         x = x.view(x.size(0), -1)
         return self.classifier(x)
 
-# --- Pretrained model ---
+
 class LambdaBase(nn.Sequential):
     def __init__(self, fn, *args):
         super().__init__(*args)
@@ -113,9 +108,7 @@ def build_predict_model():
     backbone = build_backbone()
     return nn.Sequential(ReCodeAlphabet(), ConcatenateRC(), backbone, AverageRC())
 
-# ==============================================================================
-# 工具函数
-# ==============================================================================
+
 def extract_center_pad(seq_data, target_len):
     """从中心提取target_len长度，两端填0补到FULL_LENGTH"""
     n, c, l = seq_data.shape
@@ -141,20 +134,18 @@ def compute_per_feature_auc(labels, preds):
             aucs.append(np.nan)
     return np.array(aucs)
 
-# ==============================================================================
-# 主流程
-# ==============================================================================
+
 def main():
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     print(f"Device: {device}")
 
-    # 加载测试数据
+
     print("Loading test data...")
     mat = scipy.io.loadmat(TEST_DATA_PATH)
-    testxdata = mat['testxdata'].astype(np.float32)  # (455024, 4, 1000) AGCT format
-    testlabels = mat['testdata']  # (455024, 919)
+    testxdata = mat['testxdata'].astype(np.float32)
+    testlabels = mat['testdata']
 
-    # 前向序列 (half)
+
     half = testxdata.shape[0] // 2
     testxdata_fwd = testxdata[:half]
     testlabels_fwd = testlabels[:half]
@@ -162,9 +153,7 @@ def main():
 
     results = {}
 
-    # ==================================================================
-    # Ours model
-    # ==================================================================
+
     print("\n" + "="*60)
     print("OUR MODEL")
     print("="*60)
@@ -177,13 +166,13 @@ def main():
 
     for cl in CONTEXT_LENGTHS:
         print(f"\n  Context length: {cl}bp")
-        # 准备数据
+
         if cl == 1000:
             data = testxdata_fwd.copy()
         else:
             data = extract_center_pad(testxdata_fwd, cl)
 
-        # 推理 (with RC ensembling)
+
         preds = []
         bs = 256
         with torch.no_grad():
@@ -202,9 +191,7 @@ def main():
         print(f"    AUC: median={np.median(valid_aucs):.4f}, mean={np.mean(valid_aucs):.4f}, n={len(valid_aucs)}")
         results[('ours', cl)] = aucs
 
-    # ==================================================================
-    # Pretrained model
-    # ==================================================================
+
     print("\n" + "="*60)
     print("PRETRAINED MODEL")
     print("="*60)
@@ -214,9 +201,7 @@ def main():
     model_pre.to(device)
     model_pre.eval()
 
-    # Pretrained expects ACGT input
-    # testxdata is AGCT: A=0, G=1, C=2, T=3
-    # ACGT: A=0, C=1, G=2, T=3 → need to reorder [0, 2, 1, 3]
+
     testxdata_acgt = testxdata_fwd[:, [0, 2, 1, 3], :].copy()
 
     for cl in CONTEXT_LENGTHS:
@@ -226,7 +211,7 @@ def main():
         else:
             data = extract_center_pad(testxdata_acgt, cl)
 
-        # 推理 (model handles RC internally)
+
         preds = []
         bs = 256
         with torch.no_grad():
@@ -242,9 +227,7 @@ def main():
         print(f"    AUC: median={np.median(valid_aucs):.4f}, mean={np.mean(valid_aucs):.4f}, n={len(valid_aucs)}")
         results[('pretrained', cl)] = aucs
 
-    # ==================================================================
-    # 统计检验
-    # ==================================================================
+
     print("\n" + "="*60)
     print("STATISTICAL TESTS")
     print("="*60)
@@ -253,7 +236,7 @@ def main():
         aucs_200 = results[(model_name, 200)]
         aucs_500 = results[(model_name, 500)]
 
-        # paired t-test
+
         mask = ~(np.isnan(aucs_1000) | np.isnan(aucs_200))
         t_stat, p_val = stats.ttest_rel(aucs_1000[mask], aucs_200[mask])
         print(f"  {model_name}: 1000bp vs 200bp → t={t_stat:.2f}, p={p_val:.2e}")
@@ -266,9 +249,7 @@ def main():
         t_stat, p_val = stats.ttest_rel(aucs_500[mask], aucs_200[mask])
         print(f"  {model_name}: 500bp vs 200bp → t={t_stat:.2f}, p={p_val:.2e}")
 
-    # ==================================================================
-    # 画图
-    # ==================================================================
+
     print("\nPlotting...")
 
     with open(f'{WORK}/predictor_names.txt') as f:
@@ -291,7 +272,7 @@ def main():
 
         for ci, cl in enumerate(CONTEXT_LENGTHS):
             aucs = results[(model_name, cl)]
-            # 按类别分组
+
             cats = {'TF': [], 'DNase-seq': [], 'Histone': []}
             for i, name in enumerate(predictor_names):
                 cat = classify(name)
@@ -307,13 +288,13 @@ def main():
         bp = ax.boxplot(data_for_box, positions=positions, widths=0.6,
                         patch_artist=True, showfliers=False)
 
-        # 着色
+
         color_cycle = ['#4575B4', '#F4622E', '#74ADD1'] * 3
         for patch, c in zip(bp['boxes'], color_cycle):
             patch.set_facecolor(c)
             patch.set_alpha(0.7)
 
-        # X轴标签
+
         ax.set_xticks([1, 5, 9])
         ax.set_xticklabels(['200bp', '500bp', '1000bp'])
         ax.set_title(labels_plot[model_name], fontsize=11, fontweight='bold',
@@ -322,7 +303,7 @@ def main():
         ax.set_ylim(0.4, 1.0)
         ax.axhline(y=0.5, color='gray', linestyle='--', alpha=0.3)
 
-        # 统计标注
+
         aucs_1000 = results[(model_name, 1000)]
         aucs_200 = results[(model_name, 200)]
         mask = ~(np.isnan(aucs_1000) | np.isnan(aucs_200))
@@ -331,7 +312,7 @@ def main():
                 transform=ax.transAxes, ha='center', va='top', fontsize=8,
                 bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
 
-    # 图例
+
     from matplotlib.patches import Patch
     legend_elements = [Patch(facecolor='#4575B4', alpha=0.7, label='TF binding'),
                        Patch(facecolor='#F4622E', alpha=0.7, label='DNase-seq'),
@@ -347,7 +328,7 @@ def main():
     plt.close()
     print(f"  Saved: {out_path}")
 
-    # 保存数值
+
     np.savez(f'{HERE}/experiment2_auc_data.npz',
              ours_200=results[('ours', 200)],
              ours_500=results[('ours', 500)],

@@ -100,7 +100,7 @@ def nearest_distances(df):
 
 
 def prepare(tables, out):
-    # One copy of each SNP shared by both tasks and all negative groups.
+
     keycols = ['chr', 'pos', 'ref', 'alt']
     variants = pd.concat([d[keycols] for d in tables.values()]).drop_duplicates().reset_index(drop=True)
     variants['variant_id'] = np.arange(len(variants))
@@ -145,7 +145,7 @@ def prepare(tables, out):
 
 
 def effects(model, encoded, alternate, device):
-    # AGCT reverse complement is channel reversal. Variant is nucleotide 500.
+
     ref = torch.nn.functional.one_hot(torch.as_tensor(encoded.astype(np.int64), device=device), 4)
     ref = ref.permute(0, 2, 1).float().unsqueeze(2).contiguous()
     alt = ref.clone()
@@ -172,7 +172,7 @@ def infer(variants, bases, out, name, batch_size, device):
         return features
     model = (load_pretrained_model if name == 'pretrained' else load_our_model)(device)
     if name == 'pretrained':
-        # Original network uses Threshold(0, 1e-6), including negative inputs.
+
         for container in [model.features, model.classifier]:
             for i, module in enumerate(container):
                 if isinstance(module, torch.nn.ReLU):
@@ -217,8 +217,8 @@ def evaluate(df, features, out, task, model_name, groups=GROUPS,
         x = scaler.fit_transform(np.asarray(features[df.loc[train,'variant_id']], dtype=np.float32))
         y = labels[train]
         weights = np.where(y == 1, len(y)/(2*(y == 1).sum()), len(y)/(2*(y == 0).sum()))
-        # v0.40 used penalties against summed gradients; modern gblinear
-        # multiplies its parameters by sum(weights). Preserve the old strength.
+
+
         penalty_scale = float(weights.sum())
         class Progress(xgb.callback.TrainingCallback):
             def after_iteration(self, model, epoch, evals_log):
@@ -276,8 +276,8 @@ def plot_pretrained_and_ours_separately(summary, out):
     if not raw_funseq.empty:
         raw_funseq['funseq2_score'] = pd.to_numeric(raw_funseq.funseq2_score, errors='coerce')
         raw_funseq = raw_funseq.dropna(subset=['funseq2_score']).drop_duplicates()
-        # If repeated indexed intervals return conflicting rows for one allele,
-        # exclude that allele instead of selecting an arbitrary value.
+
+
         exact = raw_funseq[raw_funseq.alt_set.ne('.')]
         exact_key = ['chr','pos','ref','alt_set']
         conflict = exact.groupby(exact_key).funseq2_score.nunique()
@@ -293,8 +293,7 @@ def plot_pretrained_and_ours_separately(summary, out):
     funseq_available = not raw_funseq.empty
     keys = ['chr','pos','ref','alt','label']
 
-    # The All control group is sampled once and reused for every method/model.
-    # Distance groups and all positive examples remain complete.
+
     cohorts = {}
     for task in task_info:
         full = pd.read_csv(out/f'{task}_pretrained_oof.tsv.gz', sep='\t')
@@ -373,7 +372,7 @@ def plot_pretrained_and_ours_separately(summary, out):
     y_high = min(1., float(np.ceil((float(metric_values.max())+scale_pad)/.05)*.05))
 
     for deepsea_name in ['pretrained','ours']:
-        # Use a common vertical scale for both independently rendered figures.
+
         fig, axes = plt.subplots(1,2,figsize=(10.3,3.35),gridspec_kw={'wspace':.34})
         for ax, task in zip(axes,task_info):
             title, _ = task_info[task]
@@ -449,7 +448,7 @@ def main():
         df['distance_bp'] = nearest_distances(df)
         df = df.merge(variants, on=['chr','pos','ref','alt'],how='left',validate='many_to_one')
         print(task, 'exclusions by group:', df.groupby('label').valid.agg(['size','sum']).to_dict(),flush=True)
-        # Colocated alleles must not appear repeatedly in a task; preserve positive first.
+
         df = df[df.valid].sort_values('positive',ascending=False,kind='stable').drop_duplicates(['chr','pos','label'])
         tables[task] = df.reset_index(drop=True)
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -457,9 +456,8 @@ def main():
     for model_name in ['pretrained','ours']:
         features = infer(variants,bases,args.output,model_name,args.batch_size,device)
         for task, df in tables.items():
-            # Recompute metrics from the out-of-fold probabilities on each run.
-            # Fold prediction caches may accelerate evaluation, but summary JSON
-            # files are never treated as an authoritative source of AUC values.
+
+
             result = evaluate(df,features,args.output,task,model_name)
             (args.output/f'{task}_{model_name}_summary.json').write_text(json.dumps(result,indent=2))
             rows.extend(result)

@@ -76,7 +76,7 @@ def prepare_test_cache() -> tuple[list[str], list[int]]:
         if x.shape != (455024, 4, WIDTH) or y.shape != (455024, N_FEATURES):
             raise RuntimeError(f"Unexpected test.mat dimensions: {x.shape}, {y.shape}")
         n_forward = x.shape[0] // 2
-        # DeepSEA test.mat is AGCT, channels first. Store row-major (sample, position, channel).
+
         x[:n_forward].transpose(0, 2, 1).tofile(TEST_X)
         y[:n_forward].tofile(TEST_Y)
         del mat, x, y
@@ -84,7 +84,7 @@ def prepare_test_cache() -> tuple[list[str], list[int]]:
     n_test = 227_512
     vx = np.memmap(TEST_X, dtype=np.uint8, mode="r", shape=(n_test, WIDTH, 4))
     vy = np.memmap(TEST_Y, dtype=np.uint8, mode="r", shape=(n_test, N_FEATURES))
-    # Strong serialization guard: source row 0 reconstructed from the raw cache.
+
     from scipy.io import loadmat
     m = loadmat(DATA / "test.mat", variable_names=["testxdata", "testdata"])
     source_seq = "".join(BASES[np.argmax(m["testxdata"][0], axis=0)])
@@ -93,7 +93,7 @@ def prepare_test_cache() -> tuple[list[str], list[int]]:
         raise RuntimeError("Correctly serialized test cache failed row-0 round-trip")
     del m
 
-    # Persist deterministic, feature-stratified held-out indices from the forward half.
+
     rng = np.random.default_rng(SEED)
     for feature in tf_indices:
         path = TEST_INDEX_DIR / f"feature_{feature}.npy"

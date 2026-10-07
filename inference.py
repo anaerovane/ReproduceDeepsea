@@ -60,8 +60,7 @@ def main() -> None:
             check=True,
         )
 
-    # Runner outputs are kept in their original project locations. Collect
-    # named copies here so plot.py has one stable, model-labeled input set.
+
     outputs = {
         "test_labels.npy": root / "test_labels.npy",
         "test_predictions_pretrained.npy": root / "test_predictions.npy",

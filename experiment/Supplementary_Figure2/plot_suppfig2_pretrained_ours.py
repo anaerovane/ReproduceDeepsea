@@ -60,7 +60,7 @@ def load_test_index_map(features: list[int]) -> dict[int, np.ndarray]:
         with np.load(index_bundle) as bundle:
             return {i: bundle[f"feature_{i}"].astype(np.int32) for i in features}
 
-    # The training scripts write this temporary layout before packaging a run.
+
     result = {}
     for i in features:
         retry = OUT / "retry_incomplete" / "test_indices" / f"feature_{i}.npy"
@@ -104,7 +104,7 @@ def infer(model_name, features, union, xmap, device):
     if model_name=='pretrained': model=load_pretrained_model(device)
     else: model=load_our_model(device)
     if model_name=='pretrained':
-        # The released DeepSEA checkpoint uses Threshold(0, 1e-6), not ReLU.
+
         for seq in (model.features,model.classifier):
             for j,m in enumerate(seq):
                 if isinstance(m,torch.nn.ReLU): seq[j]=torch.nn.Threshold(0,1e-6)
@@ -115,12 +115,12 @@ def infer(model_name, features, union, xmap, device):
     with torch.inference_mode():
         for start in range(0,len(union),BATCH):
             ids=union[start:start+BATCH]
-            # Cache rows are AGCT one-hot, shape (N, position, channel).
+
             raw=np.asarray(xmap[ids],dtype=np.uint8)
             agct=torch.from_numpy(raw.transpose(0,2,1).copy()).to(device=device,dtype=torch.float32)
             rc=raw[:,::-1,:][:,:,[3,2,1,0]]
             rc=torch.from_numpy(rc.transpose(0,2,1).copy()).to(device=device,dtype=torch.float32)
-            # Both local checkpoints use the verified AGCT order of test.mat.
+
             both=torch.cat([agct.unsqueeze(2),rc.unsqueeze(2)],dim=0)
             values=model(both)
             b=len(ids)

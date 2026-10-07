@@ -55,7 +55,7 @@ def check_job(job):
                                 'detail': body[:300].decode('utf-8', 'replace')}
 
         if body.startswith(b'\x1f\x8b'):
-            # Validate before replacing the destination; keep the source gzip intact.
+
             with gzip.GzipFile(fileobj=io.BytesIO(body)) as f:
                 f.read(1)
             temp = dest.with_suffix(dest.suffix + '.tmp')

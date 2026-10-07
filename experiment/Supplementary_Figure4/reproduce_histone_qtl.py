@@ -26,9 +26,9 @@ import torch
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT))
-import run_inference as pretrained_inference  # noqa: E402
-import run_inference_ours as ours_inference  # noqa: E402
-from model_assets import (  # noqa: E402
+import run_inference as pretrained_inference
+import run_inference_ours as ours_inference
+from model_assets import (
     resolve_ours_checkpoint,
     resolve_pretrained_variant_effects_checkpoint,
 )
@@ -63,8 +63,8 @@ def load_qtls(path: Path) -> pd.DataFrame:
         df[col] = pd.to_numeric(df[col], errors="coerce")
     df = df[(df["FDR"] < 0.1) & df["TEST.SNP.POS"].notna() &
             df["ALPHA"].notna() & df["BETA"].notna()].copy()
-    # CHT tests SNP/region pairs. Figure evaluates variant SNPs, so retain the
-    # most significant passing region once per SNP and histone mark.
+
+
     df = df.sort_values(["MARK", "FDR", "P.VALUE"]).drop_duplicates(
         ["MARK", "TEST.SNP.CHROM", "TEST.SNP.POS", "TEST.SNP.REF.ALLELE", "TEST.SNP.ALT.ALLELE"])
     if df.empty:
@@ -97,9 +97,8 @@ def lift_hg18_positions(df: pd.DataFrame, chain_path: Path):
                 continue
             h = line.split()
             score = int(h[1])
-            # For hg18ToHg19, the chain's t side is hg18 (source) and its q
-            # side is hg19 (destination). The old code indexed q and mapped
-            # back to t, silently reversing the requested conversion.
+
+
             tname, tpos = h[2], int(h[5])
             qname, qsize, qstrand, qpos = h[7], int(h[8]), h[9], int(h[10])
             while True:
@@ -143,20 +142,14 @@ def fetch_variant_sequences(df: pd.DataFrame, chain_path: Path = CHAIN):
         if genome is None:
             continue
         ref, alt = str(row["TEST.SNP.REF.ALLELE"]).upper(), str(row["TEST.SNP.ALT.ALLELE"]).upper()
-        # Coordinate-chain orientation and allele-label orientation are
-        # separate things. LiftOver's strand tells us how the source reference
-        # sequence maps to hg19; it does not define the strand convention used
-        # to encode alleles in the CHT table. First account for the chain
-        # orientation, then reconcile the allele pair against the hg19 base in
-        # both possible CHT coding orientations. Palindromic SNPs are
-        # ambiguous under this reconciliation and are excluded below.
+
+
         if chain_strand == "-":
             ref, alt = ref.translate(complement), alt.translate(complement)
         if len(ref) != 1 or len(alt) != 1 or ref not in "ACGT" or alt not in "ACGT":
             continue
-        # Match DeepSEA's official VCF convention: the 1000 bp reference
-        # window starts at variant_position - 499 (1-based), placing the
-        # variant at zero-based sequence index 499.
+
+
         start, end = pos - 499, pos + 501
         if start < 0 or end > len(genome):
             continue
@@ -169,8 +162,8 @@ def fetch_variant_sequences(df: pd.DataFrame, chain_path: Path = CHAIN):
         comp_alt = genome_ref == alt.translate(complement)
         matches = [direct_ref, direct_alt, comp_ref, comp_alt]
         if sum(matches) != 1:
-            # No match means build/allele disagreement; multiple matches are
-            # strand-ambiguous palindromic SNVs (A/T or C/G).
+
+
             continue
         if direct_ref:
             genome_alt, flip_truth = alt, False
@@ -181,7 +174,7 @@ def fetch_variant_sequences(df: pd.DataFrame, chain_path: Path = CHAIN):
         elif comp_ref:
             genome_alt, flip_truth = alt.translate(complement), False
             orientation_label = "complement_ref_alt"
-        else:  # comp_alt
+        else:
             genome_alt, flip_truth = ref.translate(complement), True
             orientation_label = "complement_swapped"
         alt_seq = seq[:499] + genome_alt + seq[500:]
@@ -197,8 +190,8 @@ def run_predictions(refs: np.ndarray, alts: np.ndarray, device: str, batch_size:
     outputs = {}
     for label, model in [("pretrained", pre), ("ours", ours)]:
         pred_ref, pred_alt = [], []
-        # The pretrained wrapper accepts ACGT and reorders internally, while
-        # the locally trained checkpoint consumes AGCT directly.
+
+
         if label == "ours":
             model_refs = refs[:, [0, 2, 1, 3], :]
             model_alts = alts[:, [0, 2, 1, 3], :]
@@ -209,8 +202,8 @@ def run_predictions(refs: np.ndarray, alts: np.ndarray, device: str, batch_size:
                 xr = torch.from_numpy(model_refs[i:i + batch_size]).unsqueeze(2).to(device)
                 xa = torch.from_numpy(model_alts[i:i + batch_size]).unsqueeze(2).to(device)
                 if label == "pretrained":
-                    # The variantEffects workflow evaluates forward and
-                    # reverse-complement sequences, then averages predictions.
+
+
                     pr = (model(xr) + model(xr.flip(dims=[1, 3]))) / 2
                     pa = (model(xa) + model(xa.flip(dims=[1, 3]))) / 2
                 else:
@@ -263,7 +256,7 @@ def write_figures(df: pd.DataFrame, raw: dict, output_dir: Path):
         plt.close(fig)
 
     pd.DataFrame(curve_rows).to_csv(output_dir / "accuracy_vs_margin.tsv", sep="\t", index=False)
-    # Save raw arrays independent of plotting code.
+
     np.savez_compressed(output_dir / "histone_qtl_raw_predictions.npz",
                         pred_ref_pretrained=raw["pretrained"][0], pred_alt_pretrained=raw["pretrained"][1],
                         pred_ref_ours=raw["ours"][0], pred_alt_ours=raw["ours"][1],

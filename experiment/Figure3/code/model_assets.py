@@ -67,7 +67,7 @@ def resolve_pretrained_predict_checkpoint(project_root: str | Path) -> Path:
             return downloaded
     except Exception:
         pass
-    # Zenodo is the authoritative upstream source and public fallback.
+
     return _download_verified_checkpoint(PRETRAINED_PREDICT_NAME, PRETRAINED_PREDICT_URL)
 
 

@@ -11,7 +11,7 @@ from pathlib import Path
 
 WORK = Path(__file__).resolve().parent
 
-# 加载数据
+
 data = np.load(WORK / 'experiment2_auc_data.npz')
 
 contexts = [200, 500, 1000]
@@ -35,7 +35,7 @@ for model_name, key_prefix, color, title in [
         patch.set_facecolor(color)
         patch.set_alpha(0.7)
 
-    # 标中位数数值
+
     for i, bd in enumerate(box_data):
         med = np.median(bd)
         ax.text(i, med + 0.008, f'{med:.3f}', ha='center', va='bottom', fontsize=8)

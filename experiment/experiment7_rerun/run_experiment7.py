@@ -82,7 +82,7 @@ def load_sequence(variant: dict) -> str:
 
 
 def one_hot(sequence: str) -> np.ndarray:
-    # Match experiment6_saturation_full.py exactly: channel order AGCT.
+
     mapping = {base: index for index, base in enumerate("AGCT")}
     result = np.zeros((4, len(sequence)), dtype=np.float32)
     for i, base in enumerate(sequence):
@@ -97,15 +97,15 @@ def target_indices(factor: str) -> list[int]:
         names = [(i, name) for i, name in enumerate(PREDICTORS) if factor in name.upper()]
     if not names:
         raise ValueError(f"No predictor index found for {factor}")
-    # Preserve all matching cell/assay outputs: the report's FOXA1 probability
-    # for rs4784227 is the T-47D assay, not the HepG2 assay in the old plot.
+
+
     return [i for i, _ in names]
 
 
 def predict(model, sequence: str, model_name: str, device: torch.device) -> np.ndarray:
     encoded = one_hot(sequence)
     if model_name == "pretrained":
-        # The local pretrained inference path consumes ACGT channel order.
+
         encoded = encoded[[0, 2, 1, 3], :].copy()
     tensor = torch.from_numpy(encoded).unsqueeze(0).unsqueeze(2).to(device)
     with torch.inference_mode():
@@ -172,7 +172,7 @@ def main():
                 "window_alt": alt_sequence,
                 "factor_predictions": {name: factor_values},
             })
-    # Consolidate per-model records under one entry per variant.
+
     by_variant = {}
     for record in metadata["variants"]:
         variant_id = record["id"]
