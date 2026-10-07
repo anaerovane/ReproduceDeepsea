@@ -24,7 +24,7 @@ import numpy as np
 HERE = Path(__file__).resolve().parent
 ROOT = Path(os.environ.get("DEEPSEA_FUXIAN_ROOT", str(HERE.parents[1]))).resolve()
 DATA = ROOT / "deepsea_train"
-OUT = HERE / "suppfig2_tf_fulltrain"
+OUT = HERE / "results"
 BIN_KERNEL = HERE / "gkmsvm_kernel"
 BIN_TRAIN = HERE / "gkmsvm_train"
 BIN_CLASSIFY = HERE / "gkmsvm_classify"
@@ -293,6 +293,14 @@ def main() -> int:
     parser.add_argument("--features", nargs="*", type=int, help="optional predictor indices")
     args = parser.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
+    if not TRAIN_X.is_file() or not TRAIN_Y.is_file():
+        print("Expanded training cache is missing; rebuilding it from train.mat (about 20 GB).", flush=True)
+        subprocess.run(
+            [sys.executable, str(HERE / "prepare_gkm_training_cache.py")],
+            cwd=ROOT,
+            env={**os.environ, "DEEPSEA_FUXIAN_ROOT": str(ROOT)},
+            check=True,
+        )
     names, features = prepare_test_cache()
     if args.features is not None:
         bad = sorted(set(args.features) - set(features))

@@ -2,10 +2,9 @@
 
 [GitHub code, final figures, and method notes](https://github.com/anaerovane/ReproduceDeepsea/tree/main/experiment/Supplementary_Figure7) · [Hugging Face result tables and fold caches](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Supplementary_Figure7/results)
 
-This is the GRASP eQTL and GWAS-only reproduction. HGMD was intentionally
-excluded because the original HGMD regulatory-variant cohort is unavailable;
-no ClinVar proxy is used. The output consists of separate `pretrained` and
-`ours` figures.
+This experiment covers the planned GRASP eQTL and GWAS cohorts. HGMD is outside
+its scope, and no ClinVar proxy is used. The output consists of separate
+`pretrained` and `ours` figures.
 
 ## Inputs
 
@@ -53,9 +52,8 @@ Run from the GitHub repository root with:
 python -u experiment/Supplementary_Figure7/suppfig7_feature_ablation.py
 ```
 
-This is a partial reproduction of Supplementary Figure 7: it covers two
-available cohorts and uses CADD-provided conservation annotations. It does not
-reproduce the unavailable HGMD panel or guarantee identical conservation
-annotation provenance to the original study. Results are recalculated from
+This reproduces the planned GRASP/GWAS scope of Supplementary Figure 7 using
+CADD-provided conservation annotations. Conservation annotation provenance is
+not guaranteed to be identical to the original study. Results are recalculated from
 local variant-level features and fold predictions, not copied from the paper.
 The required cohort tables and effect matrices are fetched from the linked Hugging Face paths when they are not present locally.

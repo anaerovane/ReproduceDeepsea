@@ -44,7 +44,7 @@ The full AUC table also reports the 31kbp, 6.3kbp, 710bp, and 360bp negative gro
 
 ## Interpretation limits
 
-These are unsupervised ranking results, not classifier results. AUCs against random negatives are modest (0.56–0.60); the combined score is highest among these three scores for both cohorts and models. Complete-case AUCs can be biased if missing annotation values are systematic. This analysis reuses Figure3 inference artifacts and did not rerun either checkpoint. HGMD was intentionally excluded, so this is not a reproduction of an HGMD evaluation.
+These are unsupervised ranking results, not classifier results. AUCs against random negatives are modest (0.56–0.60); the combined score is highest among these three scores for both cohorts and models. Complete-case AUCs can be biased if missing annotation values are systematic. This analysis reuses Figure3 inference artifacts and did not rerun either checkpoint. HGMD is outside the planned scope of this experiment.
 
 ## Outputs
 

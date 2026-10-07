@@ -11,7 +11,7 @@
       "sha256": "347c742703a75f07e9abd6c77409fe754fb1a3b3736ccdb6569784f56116453a"
     },
     "ours": {
-      "path": "/home/wuzheng/IOC/deepsea/fuxian3/training_checkpoints/best_model_FINAL_EPOCH53.pth",
+      "path": "Hugging Face: aer0vane/reproduce_deepsea/training_checkpoints/best_model_FINAL_EPOCH53.pth",
       "sha256": "5979e5b48ef892b76f23aa3af4149787e8f7a0ef5f5bfef5e676997a6c1731bb"
     }
   },

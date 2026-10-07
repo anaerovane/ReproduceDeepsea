@@ -28,13 +28,13 @@
 6. XGBoost `gblinear`，eta 0.1，原始 alpha 0、lambda 10、100 轮。使用 GPU 确定性 coordinate descent；新版的 alpha/lambda 必须除以该折训练权重总和，才能保持旧版对梯度总和的正则强度。每折保存分类器、标准化参数及预测缓存。输出每个距离组与正样本的 pooled out-of-fold AUC。
 7. 距离用负样本到同染色体最近正样本的实际 bp 距离计算，不硬编码横坐标。补充表的组名、Figure 3 的名义距离和按当前完整正样本集计算的最近距离有差异。例如 eQTL 的 31kbp/6.3kbp/710bp/360bp 组实际均值为约 14,781/3,838/1,251/401 bp；图中直接报告计算值，保留原始组名于 CSV。这些点不能声称与论文横坐标完全相同。
 
-**局限：**缺少原文的四项进化保守性特征。DeepSEA 两个 checkpoint 的曲线属于 chromatin-effects-only 复跑，不能承诺得到原文完整 DeepSEA 曲线。图中的 CADD PHRED、三种 GWAVA 曲线和 FunSeq2 v2.1.0 曲线由对应变异分数重新计算；CADD 分数的版本没有可复核记录。HGMD 面板因原始队列不可得而省略。具体来源、哈希及 AUC 口径见 `FIGURE3_DATA_PROVENANCE.md`。
+**局限：**缺少原文的四项进化保守性特征。DeepSEA 两个 checkpoint 的曲线属于 chromatin-effects-only 复跑，不能承诺得到原文完整 DeepSEA 曲线。图中的 CADD PHRED、三种 GWAVA 曲线和 FunSeq2 v2.1.0 曲线由对应变异分数重新计算；CADD 分数的版本没有可复核记录。本实验范围限定为 GRASP eQTL 与 GWAS；不包含 HGMD 队列，也不使用 ClinVar 替代。具体来源、哈希及 AUC 口径见 `FIGURE3_DATA_PROVENANCE.md`。
 
 **原始补充表的标签重叠：**核查发现 eQTL 表有 16,377 行负样本与正样本的 chr/pos/ref/alt 完全相同，GWAS 表有 1,924 行。对应预测概率和 fold 也相同。本次保留作者 CSV 的原始标签，两个 checkpoint 使用完全相同的队列和空间 fold；同坐标样本不会跨 fold，但重复的正负标签会产生评价噪声。因此本次结果是“原始补充表标签上的模型比较”，不是独立重建并严格排除正负交集后的负样本实验。论文补充表参考 AUC 也按同样的原始标签计算，不能混用清理后的队列与未清理的参考值。详细核查见 `source_cohort_checks.json`。若另做清理队列实验，应移走所有分类器/OOF 缓存后重新训练，不能仅删掉测试行并沿用本次分类器。
 
-## HGMD 队列不可得
+## 本次实验范围
 
-HGMD Professional 2014.4 原始 2,977 个 regulatory SNV 坐标不可得，主图只展示 GRASP eQTL 与 GWAS Catalog。ClinVar proxy 不等价于 HGMD，相关旧脚本、结果和本地下载已清理；详情见 `HGMD_unavailable.md`。
+本次 Figure 3 复现按已确定范围评估 GRASP eQTL 与 GWAS Catalog。HGMD 面板不在本次范围内，不使用 ClinVar proxy。HGMD 数据来源核查记录留在 `HGMD_unavailable.md`，用于说明为何没有采用替代队列。
 
 ## 代码与数据
 
@@ -70,4 +70,4 @@ python -u code/figure3_rerun.py > outputs/figure3_run.log 2>&1
 
 eQTL/GWAS 的 40 个分类器折均已完成。逐样本 OOF 文件重算的 AUC 与保存汇总一致，同坐标始终同 fold。两个模型全部 1,855,581 个有效 SNP 的 1,838 维效应已扫描，全部有限，919 个绝对效应全部处于 [0, 1]。另已核对 pretrained 与本地原始 variant 模型在测试序列上的输出一致；相同 ref/alt 的效应在浮点误差内为零。
 
-HGMD 数据可得性结论见 `HGMD_unavailable.md`。主图只含 eQTL/GWAS 两项。核验记录位于 `outputs/metrics_provenance.json`、`eqtl_verification.json`、`gwas_verification.json` 和 `feature_verification.json`。
+本次报告范围为 eQTL/GWAS 两项；HGMD 不在范围内。数据来源核验记录见 `HGMD_unavailable.md`。核验结果位于 `outputs/metrics_provenance.json`、`eqtl_verification.json`、`gwas_verification.json` 和 `feature_verification.json`。

@@ -3,14 +3,18 @@
 
 from pathlib import Path
 import os
+import sys
 
 import torch
 import torch.nn as nn
 
 HERE = Path(__file__).resolve().parent
 WORK_DIR = Path(os.environ.get("DEEPSEA_FUXIAN_ROOT", str(HERE.parent.parent))).resolve()
-MODEL_OURS = WORK_DIR / 'training_checkpoints' / 'best_model_FINAL_EPOCH53.pth'
-MODEL_PRETRAINED = WORK_DIR / 'models' / 'deepsea_predict.pth'
+sys.path.insert(0, str(WORK_DIR))
+from model_assets import resolve_ours_checkpoint, resolve_pretrained_predict_checkpoint
+
+MODEL_OURS = WORK_DIR / 'training' / 'checkpoints' / 'best_model_FINAL_EPOCH53.pth'
+MODEL_PRETRAINED = resolve_pretrained_predict_checkpoint(WORK_DIR)
 
 
 class DeepSEA(nn.Module):
@@ -32,7 +36,8 @@ class DeepSEA(nn.Module):
 
 def load_our_model(device='cuda'):
     model = DeepSEA()
-    checkpoint = torch.load(MODEL_OURS, map_location=device, weights_only=False)
+    checkpoint_path = resolve_ours_checkpoint(WORK_DIR)
+    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
     state = checkpoint.get('model_state_dict', checkpoint) if isinstance(checkpoint, dict) else checkpoint
     model.load_state_dict(state)
     return model.to(device).eval()

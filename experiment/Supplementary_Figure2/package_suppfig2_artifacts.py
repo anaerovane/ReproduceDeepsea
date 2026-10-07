@@ -13,7 +13,7 @@ import numpy as np
 from huggingface_hub import HfApi, hf_hub_download
 
 HERE = Path(__file__).resolve().parent
-OUT = HERE / "suppfig2_tf_fulltrain"
+OUT = HERE / "results"
 ARCHIVE_NAME = "feature_models_and_indices.tar.zst"
 ARCHIVE = OUT / ARCHIVE_NAME
 HF_REPO_ID = os.environ.get("DEEPSEA_HF_REPO", "aer0vane/reproduce_deepsea")
@@ -61,7 +61,7 @@ def main() -> None:
 
         previous = fetch_previous_archive(temp_root)
         listing = run(["tar", "-I", "zstd", "-tf", str(previous)]).splitlines()
-        strip = 1 if listing and all(x.startswith("suppfig2_tf_fulltrain/") for x in listing) else 0
+        strip = 1 if listing and all(x.startswith("results/") for x in listing) else 0
         extract = ["tar", "-I", "zstd", "-xf", str(previous), "-C", str(stage)]
         if strip:
             extract += ["--strip-components=1"]

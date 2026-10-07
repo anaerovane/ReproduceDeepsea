@@ -1,0 +1,46 @@
+{
+  "cohort_source": "McVicker et al. 2013, GEO GSE47991 processed read counts",
+  "source_build": "hg18 (GEO GSE47991 processed read counts)",
+  "reference_build": "hg19 / GRCh37",
+  "variant_center_index_0based": 499,
+  "liftover": {
+    "chain_file": "inputs/hg18ToHg19.over.chain.gz (downloaded on demand)",
+    "direction": "hg18 to hg19",
+    "method": "UCSC chain coordinate mapping; highest-score primary chromosome mapping retained"
+  },
+  "qtl_method": "WASP combined haplotype test; FDR < 0.1; one most significant region per unique SNP and mark",
+  "wasp_source_commit": "d3b8447fd7719fffa00b856fd1f27c845554693e",
+  "fdr_method": "Benjamini-Hochberg, independently per histone mark",
+  "deepsea_outputs": {
+    "H3K4me3": 860,
+    "H3K27ac": 855
+  },
+  "pretrained_inference_mode": "deepsea_variant_effects.pth with forward/reverse-complement mean, matching the DeepSEA variantEffects workflow",
+  "input_channel_order": {
+    "pretrained": "ACGT one-hot; variant-effect wrapper remaps to AGCT; forward and reverse-complement predictions averaged",
+    "ours": "AGCT one-hot"
+  },
+  "allele_harmonization": {
+    "rule": "lift hg18 positions to hg19; account for negative chain blocks, then independently match direct or complemented CHT alleles to hg19 reference; swap effect direction when ALT maps to reference; exclude mismatches and strand-ambiguous palindromic SNPs",
+    "orientation_counts": {
+      "direct_ref_alt": 2795
+    },
+    "unharmonized_rows_excluded": 785
+  },
+  "models": {
+    "pretrained": {
+      "path": "models/deepsea_variant_effects.pth",
+      "sha256": "98b20183d3288f220153a93d75bca1e6fb76800a931bf4f8b546382fdd8c99ea"
+    },
+    "ours": {
+      "path": "Hugging Face: aer0vane/reproduce_deepsea/training_checkpoints/best_model_FINAL_EPOCH53.pth",
+      "sha256": "5979e5b48ef892b76f23aa3af4149787e8f7a0ef5f5bfef5e676997a6c1731bb"
+    }
+  },
+  "qtl_counts_after_allele_harmonization": {
+    "H3K27ac": 1616,
+    "H3K4me3": 1179
+  },
+  "predicted_count": 2795,
+  "device": "cpu"
+}

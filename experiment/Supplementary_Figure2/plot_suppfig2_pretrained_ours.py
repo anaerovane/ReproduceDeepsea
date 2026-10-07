@@ -11,7 +11,7 @@ from huggingface_hub import hf_hub_download
 
 HERE = Path(__file__).resolve().parent
 FUXIAN = Path(os.environ.get("DEEPSEA_FUXIAN_ROOT", str(HERE.parents[1]))).resolve()
-OUT = HERE / "suppfig2_tf_fulltrain"
+OUT = HERE / "results"
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(FUXIAN))
 from deepsea_models import load_pretrained_model, load_our_model

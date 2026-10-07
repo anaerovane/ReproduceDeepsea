@@ -1,6 +1,6 @@
 # Experiment 9 — Unsupervised functional significance
 
-The completed analysis uses GRASP eQTL and GWAS Catalog cohorts. HGMD is unavailable and excluded. All 24 CADD GRCh37-v1.4 `inclAnno` batches were returned and audited.
+The completed analysis uses the planned GRASP eQTL and GWAS Catalog cohorts. HGMD is outside this experiment's scope. All 24 CADD GRCh37-v1.4 `inclAnno` batches were returned and audited.
 
 ## Files
 
