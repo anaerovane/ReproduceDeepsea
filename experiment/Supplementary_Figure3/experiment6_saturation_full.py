@@ -2,6 +2,7 @@
 """Run the configured pretrained and ours checkpoints on Experiment 6 inputs."""
 import json
 from pathlib import Path
+import sys
 
 import numpy as np
 import torch
@@ -9,7 +10,11 @@ import torch.nn as nn
 
 
 HERE = Path(__file__).resolve().parent
+RESULTS = HERE / "results"
 PROJECT = HERE.parents[1]
+sys.path.insert(0, str(PROJECT))
+from model_assets import resolve_ours_checkpoint, resolve_pretrained_predict_checkpoint
+
 CONFIG = json.loads((HERE / "experiment6_config.json").read_text())
 BASES = CONFIG["base_order"]
 BASE_INDEX = {base: index for index, base in enumerate(BASES)}
@@ -120,12 +125,12 @@ def log2_odds_change(reference_probabilities, mutant_probabilities):
 def load_model(model_config, device):
     if model_config["id"] == "ours":
         model = DeepSEA_Ours()
-        checkpoint = torch.load(PROJECT / model_config["checkpoint"],
+        checkpoint = torch.load(resolve_ours_checkpoint(PROJECT),
                                 map_location=device, weights_only=False)
         state_dict = checkpoint.get("model_state_dict", checkpoint)
     elif model_config["id"] == "pretrained":
         model = build_pretrained_model()
-        state_dict = torch.load(PROJECT / model_config["checkpoint"], map_location=device)
+        state_dict = torch.load(resolve_pretrained_predict_checkpoint(PROJECT), map_location=device)
     else:
         raise ValueError(f"Unsupported model id: {model_config['id']}")
     model.load_state_dict(state_dict, strict=True)
@@ -191,8 +196,9 @@ def main():
             print(f"  {chrom}:{position}: {len(mutations)} substitutions", flush=True)
         del model
 
-    np.savez(HERE / "experiment6_all_data.npz", **effects)
-    np.savez_compressed(HERE / "experiment6_raw_predictions.npz", **raw_predictions)
+    RESULTS.mkdir(parents=True, exist_ok=True)
+    np.savez(RESULTS / "experiment6_all_data.npz", **effects)
+    np.savez_compressed(RESULTS / "experiment6_raw_predictions.npz", **raw_predictions)
     print("Inference complete; generating figures from the saved effects.", flush=True)
     from experiment6_plot import main as plot_main
     plot_main()
