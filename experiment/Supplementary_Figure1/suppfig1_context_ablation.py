@@ -1,6 +1,6 @@
 """
 ================================================================================
-实验 #2: 上下文长度消融 (Context Length Ablation)
+Supplementary Figure 1: Context Length Ablation
 ================================================================================
 测试输入窗口大小 (1000bp / 500bp / 200bp) 对AUC的影响。
 两个模型都跑：pretrained 和 ours。
@@ -319,16 +319,16 @@ def main():
     fig.legend(handles=legend_elements, loc='lower center', ncol=3, fontsize=9,
                bbox_to_anchor=(0.5, -0.02))
 
-    plt.suptitle('Experiment #2: Context Length Ablation', fontsize=12, fontweight='bold')
+    plt.suptitle('Supplementary Figure 1: Context Length Ablation', fontsize=12, fontweight='bold')
     plt.tight_layout(rect=[0, 0.04, 1, 0.96])
 
-    out_path = f'{HERE}/experiment2_context_ablation.png'
+    out_path = f'{HERE}/supplementary_figure1_context_ablation.png'
     plt.savefig(out_path, dpi=300, bbox_inches='tight')
     plt.close()
     print(f"  Saved: {out_path}")
 
 
-    np.savez(f'{HERE}/experiment2_auc_data.npz',
+    np.savez(f'{HERE}/supplementary_figure1_auc_data.npz',
              ours_200=results[('ours', 200)],
              ours_500=results[('ours', 500)],
              ours_1000=results[('ours', 1000)],

@@ -1,5 +1,5 @@
 """
-实验 #2: 画Overall AUC箱线图 — 两张图，pretrained一张，ours一张
+Supplementary Figure 1: overall AUC box plots for pretrained and ours
 """
 import numpy as np
 import matplotlib
@@ -11,7 +11,7 @@ from pathlib import Path
 WORK = Path(__file__).resolve().parent
 
 
-data = np.load(WORK / 'experiment2_auc_data.npz')
+data = np.load(WORK / 'supplementary_figure1_auc_data.npz')
 
 contexts = [200, 500, 1000]
 
@@ -51,7 +51,7 @@ for model_name, key_prefix, color, title in [
     ax.set_title(title, fontsize=12, fontweight='bold', color=color)
 
     plt.tight_layout()
-    out = WORK / f'experiment2_overall_auc_{model_name}.png'
+    out = WORK / f'supplementary_figure1_{model_name}.png'
     plt.savefig(out, dpi=300, bbox_inches='tight')
     plt.close()
     print(f"Saved: {out}")
