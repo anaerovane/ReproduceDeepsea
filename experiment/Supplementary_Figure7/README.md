@@ -9,9 +9,9 @@ its scope, and no ClinVar proxy is used. The output consists of separate
 ## Inputs
 
 - Validated GRASP and GWAS variant rows, fold assignments, labels, and DeepSEA
-  effect matrices from the Hugging Face Figure 3 and Experiment 9 outputs.
+  effect matrices from the Hugging Face Figure 3 and Supplementary Figure 6 outputs.
 - Four conservation annotations (`priPhCons`, `priPhyloP`, `GerpN`, `GerpS`)
-  from the completed Experiment 9 CADD GRCh37-v1.4 `inclAnno` batches.
+  from the completed Supplementary Figure 6 CADD GRCh37-v1.4 `inclAnno` batches.
 - Only the common complete cases for all four conservation fields are scored,
   so the three feature sets are compared on the same samples. All available
   random-negative SNPs are retained (no 5% evaluation subsample).
@@ -28,7 +28,7 @@ out-of-fold scores against each negative group.
 - `chromatin`: the 919 DeepSEA per-track effect magnitudes only.
 - `conservation`: the four CADD conservation annotations only.
 
-Effect magnitude follows Experiment 9:
+Effect magnitude follows Supplementary Figure 6:
 `abs(P_ref - P_alt) * abs(logit(P_ref) - logit(P_alt))`.
 
 ## Outputs
@@ -42,7 +42,7 @@ Effect magnitude follows Experiment 9:
   auditing and resuming the run.
 
 The final `results/` directory is published on Hugging Face. When the inputs
-are absent locally, the script downloads the validated Experiment 9 cohorts
+are absent locally, the script downloads the validated Supplementary Figure 6 cohorts
 and Figure 3 effect matrices from Hugging Face; those large inputs are not
 duplicated in this folder. The final PNG/PDF plots remain beside the script.
 

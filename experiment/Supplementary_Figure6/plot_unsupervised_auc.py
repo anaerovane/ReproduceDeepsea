@@ -1,4 +1,4 @@
-"""Plot AUCs for each experiment 9 score across negative cohorts."""
+"""Plot AUCs for each Supplementary Figure 6 score across negative cohorts."""
 from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -36,7 +36,7 @@ def main():
     axes[0].set_ylabel("AUC (positive vs. negative variants)")
     handles, labels = axes[0].get_legend_handles_labels()
     fig.legend(handles, labels, loc="lower center", ncol=3, frameon=False, bbox_to_anchor=(0.5, -0.02))
-    fig.suptitle("Experiment 9: unsupervised functional-significance AUC", y=1.02)
+    fig.suptitle("Supplementary Figure 6: unsupervised functional-significance AUC", y=1.02)
     fig.tight_layout(rect=(0, 0.12, 1, 0.98))
     fig.savefig(OUTPUT, dpi=180, bbox_inches="tight")
     print(f"Wrote {OUTPUT}")

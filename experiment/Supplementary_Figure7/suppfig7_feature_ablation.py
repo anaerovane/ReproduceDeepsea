@@ -29,7 +29,7 @@ from sklearn.preprocessing import StandardScaler
 from huggingface_hub import hf_hub_download
 
 HERE = Path(__file__).resolve().parent
-EXP9 = HERE.parent / "experiment9"
+SUPPLEMENTARY_FIGURE6 = HERE.parent / "Supplementary_Figure6"
 FIG3 = HERE.parent / "Figure3" / "outputs"
 OUT = HERE / "results"
 FIGURE_DIR = HERE
@@ -52,7 +52,7 @@ def resolve_artifact(local_path, hub_path):
 
 def cohort_path(task):
     name = f"{task}_unsupervised_pretrained.tsv.gz"
-    return resolve_artifact(EXP9 / name, f"experiment/experiment9/outputs/{name}")
+    return resolve_artifact(SUPPLEMENTARY_FIGURE6 / name, f"experiment/Supplementary_Figure6/outputs/{name}")
 
 
 def effect_path(model_name):

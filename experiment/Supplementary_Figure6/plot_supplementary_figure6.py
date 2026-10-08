@@ -1,4 +1,4 @@
-"""Draw separate Experiment 9 Supplementary Figure 6 panels for each model."""
+"Draw the pretrained and ours Supplementary Figure 6 panels."
 from pathlib import Path
 import json
 import pandas as pd
@@ -42,7 +42,7 @@ def draw_model(data: pd.DataFrame, model: str) -> Path:
         ax.tick_params(labelsize=8)
     fig.suptitle(f"DeepSEA functional significance score — {model}", fontsize=11, y=1.02)
     fig.tight_layout()
-    out = OUTPUTS / f"suppfig6_{model}.png"
+    out = OUTPUTS / f"Supplementary_Figure6_{model}.png"
     fig.savefig(out, dpi=300, bbox_inches="tight")
     plt.close(fig)
     return out
