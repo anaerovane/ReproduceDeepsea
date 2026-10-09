@@ -51,3 +51,15 @@ hf download aer0vane/reproduce_deepsea \
 ```
 
 Replace `Figure3` with the experiment directory to retrieve its artifacts. Shared model weights, source data, and reference genome instructions are in [`DOWNLOAD.md`](DOWNLOAD.md).
+
+## Author and usage terms
+
+**Author:** Dong Wuzheng<br>
+**Affiliation:** Institute of Data Science, National University of Singapore
+
+Academic and commercial use is prohibited through 30 November 2026. Beginning 1 December 2026, this project will be released under the MIT License.
+
+**作者：**Dong Wuzheng<br>
+**单位：**新加坡国立大学数据科学研究所
+
+截至 2026 年 11 月 30 日，禁止任何学术或商业用途。自 2026 年 12 月 1 日起，本项目按 MIT License 开放。
