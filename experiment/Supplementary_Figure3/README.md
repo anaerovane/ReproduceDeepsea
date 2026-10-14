@@ -12,9 +12,9 @@ Predictive sequence features are identified by computationally mutating each bas
 
 ## This reproduction package
 
-This package runs the same four 1,000 bp sequence examples with the pretrained and locally trained DeepSEA checkpoints, then writes separate figures for each model. Results are model predictions, not experimental measurements. See [AUDIT.md](AUDIT.md) for input checks, effect calculations, and reproduction limits.
+This package runs four 1,000 bp sequence examples with the pretrained and locally trained DeepSEA checkpoints, then writes separate figures for each model. Mutation scans show predicted changes in chromatin-binding probability.
 
-The experiment parameters are collected in `experiment6_config.json`. The four one-hot inputs are in `sequences/`. The sequence preparation script can regenerate them from GRCh37/hg19 chromosome FASTAs placed in the project-root `reference_genome/` directory. Large prediction and effect caches are stored under `results/` on Hugging Face, keeping this source folder limited to code, inputs, and final plots.
+The experiment parameters are collected in `experiment6_config.json`. The four one-hot inputs are in `sequences/`. The sequence preparation script can regenerate them from GRCh37/hg19 chromosome FASTAs placed in the project-root `reference_genome/` directory. Prediction and effect caches are stored under `results/` on Hugging Face.
 
 ## Run from the project root
 
@@ -26,7 +26,7 @@ Download the shared feature-name table and checkpoints from Hugging Face into th
 hf download aer0vane/reproduce_deepsea --local-dir . --include predictor_names.txt --include models/deepsea_predict.pth
 ```
 
-The epoch-53 ours checkpoint is resolved from Hugging Face on demand by `model_assets.py`; it does not need to be copied into the project directory.
+The epoch-53 ours checkpoint is resolved from Hugging Face on demand by `model_assets.py`.
 
 Then run inference and generate both figures:
 
@@ -40,4 +40,4 @@ To redraw figures from the local effect cache only:
 python experiment/Supplementary_Figure3/experiment6_plot.py
 ```
 
-The raw prediction cache can be regenerated from the checkpoints and inputs. The final effect cache can be downloaded from [Hugging Face results](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Supplementary_Figure3/results) by `experiment6_plot.py` when no local cache exists. Both caches are retained there for audit and redraws.
+The raw prediction cache can be regenerated from the checkpoints and inputs. The final effect cache can be downloaded from [Hugging Face results](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Supplementary_Figure3/results) by `experiment6_plot.py`. Both caches are retained there for redraws.

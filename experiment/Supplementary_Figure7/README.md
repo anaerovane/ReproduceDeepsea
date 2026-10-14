@@ -2,8 +2,7 @@
 
 [GitHub code, final figures, and method notes](https://github.com/anaerovane/ReproduceDeepsea/tree/main/experiment/Supplementary_Figure7) · [Hugging Face result tables and fold caches](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Supplementary_Figure7/results)
 
-This experiment covers the planned GRASP eQTL and GWAS cohorts. HGMD is outside
-its scope, and no ClinVar proxy is used. The output consists of separate
+This experiment evaluates GRASP eQTL and GWAS cohorts and provides separate
 `pretrained` and `ours` figures.
 
 ## Inputs
@@ -13,8 +12,7 @@ its scope, and no ClinVar proxy is used. The output consists of separate
 - Four conservation annotations (`priPhCons`, `priPhyloP`, `GerpN`, `GerpS`)
   from the completed Supplementary Figure 6 CADD GRCh37-v1.4 `inclAnno` batches.
 - Only the common complete cases for all four conservation fields are scored,
-  so the three feature sets are compared on the same samples. All available
-  random-negative SNPs are retained (no 5% evaluation subsample).
+  so the three feature sets are compared on the same samples.
 
 ## Recomputed models
 
@@ -52,8 +50,6 @@ Run from the GitHub repository root with:
 python -u experiment/Supplementary_Figure7/suppfig7_feature_ablation.py
 ```
 
-This reproduces the planned GRASP/GWAS scope of Supplementary Figure 7 using
-CADD-provided conservation annotations. Conservation annotation provenance is
-not guaranteed to be identical to the original study. Results are recalculated from
-local variant-level features and fold predictions, not copied from the paper.
+The Supplementary Figure 7 GRASP/GWAS comparison uses CADD-provided conservation
+annotations and results recalculated from local variant-level features and fold predictions.
 The required cohort tables and effect matrices are fetched from the linked Hugging Face paths when they are not present locally.

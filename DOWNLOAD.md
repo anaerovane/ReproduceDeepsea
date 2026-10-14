@@ -1,6 +1,6 @@
 # Data and model download guide
 
-This is the single download guide for the DeepSEA reproduction workspace. Large source data and optional model files are not kept in this checkout. Run commands from the `fuxian3` project root unless a section says otherwise. The download targets below match the paths used by the existing scripts.
+This is the single download guide for the DeepSEA reproduction workspace. Run commands from the `fuxian3` project root unless a section says otherwise. The download targets below match the paths used by the existing scripts.
 
 ## 1. DeepSEA train, validation, and test data
 
@@ -19,7 +19,7 @@ bundle_dir="$(dirname "$(find /tmp/deepsea_bundle_unpack -type f -name train.mat
 cp "$bundle_dir"/train.mat "$bundle_dir"/valid.mat "$bundle_dir"/test.mat deepsea_train/
 ```
 
-The MAT files encode 1 kb sequences and labels for the central 200 bp. `train.mat` contains 2,200,000 regions, `valid.mat` 4,000 regions, and `test.mat` the chr8/chr9 held-out regions; both forward and reverse-complement examples are represented. The gkm-SVM binary caches are generated from the MAT files by the experiment scripts and do not need separate download.
+The MAT files encode 1 kb sequences and labels for the central 200 bp. `train.mat` contains 2,200,000 regions, `valid.mat` 4,000 regions, and `test.mat` the chr8/chr9 held-out regions; both forward and reverse-complement examples are represented. The experiment scripts generate gkm-SVM binary caches from the MAT files.
 
 ## 2. hg19 / GRCh37 reference genome
 
@@ -62,7 +62,7 @@ done
 
 ## 4. Pretrained model weights
 
-Normal inference downloads and verifies the upstream weights into `~/.cache/deepsea-fuxian3/`; no `models/` directory is needed. The sequence-prediction model is used for chromatin probabilities. The variant-effects model is a separate released checkpoint. Both direct Zenodo endpoints were checked and returned HTTP 200 on 2026-10-07.
+Normal inference downloads and verifies the upstream weights into `~/.cache/deepsea-fuxian3/`. The sequence-prediction model is used for chromatin probabilities. The variant-effects model is a separate released checkpoint. Both direct Zenodo endpoints were checked and returned HTTP 200 on 2026-10-07.
 
 - Upstream record: <https://zenodo.org/records/1466993>
 - Sequence-prediction model: <https://zenodo.org/records/1466993/files/deepsea_predict.pth?download=1> (MD5 `89e640bf6bdbe1ff165f484d9796efc7`)
@@ -82,7 +82,7 @@ The locally retrained epoch-53 checkpoint is separate from the pretrained weight
 
 ## What remains in this checkout
 
-This guide is stored in the `fuxian3/` project root. The data are not deleted from their source; rerunning a section restores files to the root-level paths expected by the code. The training scripts and code remain under `training/` and `experiment/`.
+This guide is stored in the `fuxian3/` project root. Rerunning a section restores files to the root-level paths expected by the code. The training scripts and code are under `training/` and `experiment/`.
 ## 5. Figure 3 model outputs
 
 The two 13.6 GB ref/alt effect matrices, variant-row mapping, OOF predictions, baseline score tables, and AUC/audit summaries are published under [Hugging Face Figure 3 outputs](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Figure3/outputs). They total about 27.48 GB. The local `experiment/Figure3/outputs/HUGGINGFACE_DATA.md` records the artifact link and restore command.
@@ -92,5 +92,3 @@ From the `fuxian3` project root, restore the published files with:
 ```bash
 hf download aer0vane/reproduce_deepsea --include "experiment/Figure3/outputs/**" --local-dir .
 ```
-
-The 1.86 GB sequence cache and per-fold classifier caches are not mirrored; they can be regenerated from the public tables/reference genome and effect matrices.

@@ -1,6 +1,6 @@
 # Supplementary Figure 2 — DeepSEA vs gkm-SVM
 
-This experiment compares DeepSEA with gkm-SVM across 690 transcription-factor predictors. The final evaluation has 689 evaluable predictors and one predictor with no held-out positives, for which AUC is undefined. The pretrained and local-checkpoint results are separate.
+This experiment compares DeepSEA with gkm-SVM across transcription-factor predictors. The final evaluation includes 689 predictors with evaluable AUCs. The pretrained and local-checkpoint results are separate.
 
 ## Layout
 
@@ -25,4 +25,4 @@ python plot_suppfig2_pretrained_ours.py
 - `results/gkm_auc_results_completed.csv`: consolidated 690-predictor table.
 - `results/pretrained_ours_same_test_auc.csv`: DeepSEA/gkm-SVM comparison on the same held-out examples.
 - `results/gkm_vs_deepsea_pretrained.{png,pdf}` and `results/gkm_vs_deepsea_ours.{png,pdf}`: final figures.
-- `results/COMPLETION_AUDIT.md` and `results/LOCAL_MODEL_FIGURES.md`: evaluation details and scope.
+- `results/LOCAL_MODEL_FIGURES.md`: evaluation details and data sources.

@@ -34,5 +34,3 @@ python plot.py ours
 ```
 
 The plotting script downloads the NPY caches from [`Hugging Face: Figure 2 outputs`](https://huggingface.co/aer0vane/reproduce_deepsea/tree/main/experiment/Figure2/outputs) as needed. `predictor_names.txt` is a shared root-level metadata file. The allele-count table is Supplementary Table 3 from Zhou & Troyanskaya, *Nature Methods* (2015), available directly from [Springer Nature](https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fnmeth.3547/MediaObjects/41592_2015_BFnmeth3547_MOESM647_ESM.csv).
-
-The `.npy` arrays are generated inference outputs, not original paper downloads. The PNGs are our separate pretrained and ours reproductions, not copies of the paper's image. There are no `.npz` inputs for this figure.

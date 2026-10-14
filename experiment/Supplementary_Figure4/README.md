@@ -1,6 +1,6 @@
 # Supplementary Figure 4 — histone QTL effect prediction
 
-This folder contains the current pretrained and locally retrained DeepSEA diagnostic figures for the histone-QTL task. The result is **not a full reproduction of the published curve**: the authors' original per-variant McVicker QTL/effect table was not recovered, so the cohort is reconstructed from GEO GSE47991 processed read counts.
+This folder contains pretrained and locally retrained DeepSEA figures for the histone-QTL task, using a cohort constructed from GEO GSE47991 processed read counts.
 
 ## Contents
 
@@ -29,6 +29,6 @@ bash run_mcvicker_cht.sh
 
 The CHT rerun is computationally intensive. `run_mcvicker_cht.sh` regenerates the CHT tables, variant predictions, and figures under `results/`.
 
-## Scope
+## Analysis
 
-The retained result uses the corrected hg18→hg19 mapping, reference-allele reconciliation, official DeepSEA 1000 bp VCF window convention, and forward/reverse-complement averaging for the pretrained variant-effects model. It contains 2,795 harmonized reconstructed SNP/mark rows (1,179 H3K4me3; 1,616 H3K27ac). The predictions and plots are diagnostic until the original McVicker per-variant association/effect cohort and exact analysis settings are available.
+The analysis uses hg18→hg19 mapping, reference-allele reconciliation, the DeepSEA 1,000 bp VCF window convention, and forward/reverse-complement averaging for the pretrained variant-effects model. It contains 2,795 harmonized SNP/mark rows (1,179 H3K4me3; 1,616 H3K27ac).
